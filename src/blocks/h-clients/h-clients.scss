@@ -1,0 +1,19 @@
+.h-clients {
+	$self: &;
+	margin-bottom: 60px;
+
+	&__title {
+
+	}
+
+	&__inner {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;		
+	}
+
+	&__item {
+		padding: 10px;
+	}
+}

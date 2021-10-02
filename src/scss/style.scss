@@ -38,9 +38,11 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
+@include font-face("MicrosoftYaHei", "MR");
+@include font-face("MicrosoftYaHeiBold", "MB");
+@include font-face("MicrosoftYaHeiLight", "ML");
 
-// @include font-face("Roboto-Black", "RBBL");
-// @import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
+@import "../../node_modules/swiper/swiper.scss";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
@@ -49,8 +51,8 @@ body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
 	line-height: calc(#{$basesize}px * 1.4);
-	font-family: sans-serif;
-	background-color: #fafafa;
+	font-family: "ML", sans-serif;
+	background-color: #fff;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;

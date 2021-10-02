@@ -1,0 +1,118 @@
+.h-hero {
+	$self: &;
+	background-color: #f8f8f8;
+	padding: 35px 0;
+	margin-bottom: 60px;
+
+	&__inner {
+		max-width: 1920px;
+		padding: 0;
+	}
+
+	&__slider {
+
+	}
+
+	&__item {
+		box-sizing: border-box;
+		display: flex;
+		padding: 0 140px;
+		overflow: hidden;
+		
+		@include media('<=xxxlg') {
+			padding: 0 30px;
+		}
+	}
+
+	&__side {
+		width: 50%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding: 75px 0 70px;
+	}
+	
+	&__title {
+		box-sizing: border-box;
+		position: relative;
+		font-family: "MR", sans-serif;
+		font-size: 40px;
+		line-height: 1.1;
+		max-width: 520px;
+		margin-bottom: 25px;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 150px;
+			background-color: #00bcd0;
+			position: absolute;
+			top: 23px;
+			left: -165px;
+			z-index: 2;
+			
+			@include media('<=xxxlg') {
+				left: -155px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 1.3;	
+		margin-bottom: 25px;
+	}
+	
+	&__button {
+		box-sizing: border-box;
+		display: block;
+		background-color: #fff;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+		padding: 20px;
+		font-size: 20px;
+		line-height: 1.1;
+		color: inherit;
+		text-decoration: none;
+		text-align: center;
+		max-width: 240px;
+	}
+	
+	&__image {
+		width: 50%;
+		padding-top: 40px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__arr {
+		@extend %reset-button;
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		width: 50px;
+		height: 32px;
+		opacity: 0.7;
+		
+		&_prev {
+			left: 140px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center / 46px 30px no-repeat transparent;
+
+			@include media('<=xxxlg') {
+				left: 30px;
+			}
+		}
+		
+		&_next {
+			right: 140px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / 46px 30px no-repeat transparent;
+
+			@include media('<=xxxlg') {
+				right: 30px;
+			}
+		}
+	}
+}

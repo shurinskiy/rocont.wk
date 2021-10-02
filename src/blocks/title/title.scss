@@ -1,0 +1,24 @@
+.title {
+	$self: &;
+	position: relative;
+	font-size: 30px;
+	line-height: 1.2;
+	font-family: "ML", sans-serif;
+	margin-bottom: 30px;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 150px;
+		background-color: #00bcd0;
+		position: absolute;
+		top: 17px;
+		left: -165px;
+		z-index: 1;
+		
+		@include media('<=xxxlg') {
+			left: -155px;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+.h-calculation {
+	$self: &;
+	background-color: #f5fdfd;
+	margin-bottom: 80px;
+	padding: 50px 0 100px;
+
+	&__title {
+		&.title {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		padding: 95px 45px 75px;
+		border-radius: 21px;
+	}
+
+	&__dashboard {
+		box-sizing: border-box;
+		width: 57%;
+		padding-right: 100px;
+	}
+
+	&__ranges {
+
+	}
+
+	&__label {
+		display: block;
+		font-family: "MR", sans-serif;
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+
+	&__range-block {
+		padding: 10px 0;
+		margin-bottom: 50px;
+	}
+
+	&__range-count {
+		font-family: "MR", sans-serif;
+		font-size: 40px;
+		line-height: 1.2;
+		margin-bottom: 40px;
+	}
+
+	&__controls {
+
+	}
+
+	&__control {
+
+	}
+
+	&__switch {
+
+	}
+
+	&__side {
+		box-sizing: border-box;
+		width: 43%;
+		padding: 75px 65px 40px;
+		border: 2px solid #00BCD0;
+		border-radius: 21px;
+	}
+
+	&__total {
+		font-size: 62px;
+		line-height: 1.2;
+		font-family: "MR", sans-serif;
+		white-space: nowrap;
+		margin-bottom: 40px;
+	}
+
+	&__list {
+		font-size: 20px;
+		line-height: 1.3;
+		margin-bottom: 60px;
+
+		li {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__button {
+		display: block;
+		margin: 0 auto 10px;
+		border: 1px solid #00BCD0;
+		text-decoration: none;
+		color: inherit;
+		padding: 20px;
+		text-align: center;
+		font-size: 20px;
+		line-height: 1.3;
+	}
+
+	&__note {
+		font-size: 14px;
+		line-height: 1.2;
+	}
+}

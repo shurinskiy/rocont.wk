@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="242.985" height="62.384" viewBox="0 0 242.985 62.384">
+  <g id="cloudy_weather_forecast_clouds" data-name="cloudy, weather, forecast, clouds" transform="translate(0.751)">
+    <g id="cloudy_weather_forecast_clouds-2" data-name="cloudy, weather, forecast, clouds" transform="translate(0 0)">
+      <path id="Path" d="M58.85,0A58.746,58.746,0,0,0,0,58.641l117.491.209A58.746,58.746,0,0,0,58.85,0Z" transform="translate(10.795 2.581)" fill="#c2f8fe"/>
+      <path id="Path-2" data-name="Path" d="M33.552,0A33.493,33.493,0,0,0,0,33.433l66.985.119A33.493,33.493,0,0,0,33.552,0Z" transform="translate(158.471 28.052)" fill="#c2f8fe"/>
+      <path id="Path-3" data-name="Path" d="M61.54,0A61.431,61.431,0,0,0,0,61.322l122.862.219A61.431,61.431,0,0,0,61.54,0Z" transform="translate(66.855)" fill="#c2f8fe"/>
+      <path id="Path-4" data-name="Path" d="M0,.1l241.483.43" transform="translate(0 61.102)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

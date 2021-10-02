@@ -1,0 +1,42 @@
+.h-benefits {
+	$self: &;
+	margin-bottom: 40px;
+
+	&__title {
+
+	}
+
+	&__items {
+		display: flex;
+		margin: 0 -30px;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		margin: 0 30px 30px;
+		font-size: 20px;
+		line-height: 1.1;
+		padding: 15px 0 0 85px;
+		background-repeat: no-repeat;
+		background-position: center left;
+		width: calc(100% / 4 - 60px);
+
+		&_1 {
+			background-image: url('./images/benefits-1.svg');
+			padding-left: 75px;
+		}
+		
+		&_2 {
+			background-image: url('./images/benefits-3.svg');
+		}
+		
+		&_3 {
+			background-image: url('./images/benefits-2.svg');
+		}
+		
+		&_4 {
+			background-image: url('./images/benefits-4.svg');
+			padding-left: 90px;
+		}
+	}
+}

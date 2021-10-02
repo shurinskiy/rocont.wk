@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125.27" height="32.236" viewBox="0 0 125.27 32.236">
+  <g id="clouds_weather_forecast_cloudy" data-name="clouds, weather, forecast, cloudy" transform="translate(0.75 0)">
+    <g id="clouds_weather_forecast_cloudy-2" data-name="clouds, weather, forecast, cloudy" transform="translate(0 0)">
+      <path id="Path" d="M23.724,0A23.724,23.724,0,0,0,0,23.724H47.449A23.724,23.724,0,0,0,23.724,0Z" transform="translate(18.303 7.762)" fill="#c2f8fe"/>
+      <path id="Path-2" data-name="Path" d="M17.166,0A17.166,17.166,0,0,0,0,17.166H34.333A17.166,17.166,0,0,0,17.166,0Z" transform="translate(81.223 14.32)" fill="#c2f8fe"/>
+      <path id="Path-3" data-name="Path" d="M11.862,0A11.862,11.862,0,0,0,0,11.862H23.724A11.862,11.862,0,0,0,11.862,0Z" transform="translate(8.214 19.624)" fill="#c2f8fe"/>
+      <path id="Path-4" data-name="Path" d="M31.486,0A31.486,31.486,0,0,0,0,31.486H62.972A31.486,31.486,0,0,0,31.486,0Z" transform="translate(34.266 0)" fill="#c2f8fe"/>
+      <path id="Path-5" data-name="Path" d="M0,.5H123.77" transform="translate(0 30.986)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

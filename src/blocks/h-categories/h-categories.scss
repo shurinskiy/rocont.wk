@@ -1,0 +1,62 @@
+.h-categories {
+	$self: &;
+
+	&__inner {
+		display: grid;
+		grid-template: auto / repeat(auto-fit, minmax(150px, auto));
+		margin-bottom: 30px;
+		
+		@include media('<=xlg') {
+
+		}
+	}
+
+	&__link {
+		box-sizing: border-box;
+		text-align: center;
+		padding: 40px 10px 30px;
+		font-family: "ML", sans-serif;
+		line-height: 1.2;
+		font-size: 15px;
+		color: inherit;
+		text-decoration: none;
+		
+		span {
+			display: block;
+			max-width: 100px;
+			margin: 0 auto;
+		}
+		
+		&_1 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-1-view-black') center top / 32px 33px no-repeat transparent;
+		}
+		
+		&_2 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-2-view-black') center top / 27px 33px no-repeat transparent;
+		}
+		
+		&_3 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-3-view-black') center top / 34px 33px no-repeat transparent;
+		}
+		
+		&_4 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-4-view-black') center top / 35px 32px no-repeat transparent;
+		}
+		
+		&_5 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-5-view-black') center top / 32px 32px no-repeat transparent;
+		}
+		
+		&_6 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-6-view-black') center top / 31px 31px no-repeat transparent;
+		}
+
+		&_7 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-7-view-black') center top / 35px 32px no-repeat transparent;
+		}
+
+		&_8 {
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-8-view-black') center top / 35px 32px no-repeat transparent;
+		}
+	}
+}
