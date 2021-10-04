@@ -4,11 +4,14 @@
 		let $self = $(this);
 		let min = $(this).attr('min') || 0;
 		let max = $(this).attr('max') || 100;
+		let round = 10**(min.length-1);
 
 		let getPercentage = (value) => {
 			value = value || 0;
-			return Math.floor((value - min)*100/(max-min))+'%';
+			return Math.floor((value - min)*100/(max - min))+'%';
 		}
+
+		let getRound = (a) => Math.round(a / round) * round;
 
 		$self
 			.addClass('range__input')
@@ -16,12 +19,13 @@
 			.parent('.range')
 			.prepend('<span class="range__scale"></span><span class="range__handler"></span>');
 
+		let initial = getPercentage($self.val());
 		let $bar = $self.parent('.range');
 		let $scale = $bar.find('.range__scale');
 		let $handler = $bar.find('.range__handler');
-		let $output = $('.range__output');
-		let $time = $('.calculator__field_time');
-		let initial = getPercentage($self.val());
+		let $output = $(this)
+						.parents('.h-calculation__range-block')
+						.find('.h-calculation__range-count span');
 
 		$scale.css({width: initial});
 		$handler.css({left: initial});
@@ -32,21 +36,8 @@
 
 			$scale.css({width: value});
 			$handler.css({left: value});
-			$output.text(this.value);
-
-			if (this.value > 200) {
-				$time.text("От 150 дней");
-			} else if (this.value > 120) {
-				$time.text("От 120 до 180 дней");
-			} else if (this.value > 80) {
-				$time.text("От 90 до 120 дней");
-			} else if (this.value > 50) {
-				$time.text("От 60 до 90 дней");
-			} else {
-				$time.text("От 45 до 60 дней");
-			}
+			$output.text(getRound(this.value));
 		});
 	});
-
 
 })();

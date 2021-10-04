@@ -51,10 +51,30 @@
 	&__side {
 		box-sizing: border-box;
 		width: 50%;
+		position: relative;
 
-		img {
-			display: block;
-			margin: 0 auto;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+
+		&_camp {
+
+		}
+
+		&_cloud-left {
+			position: absolute;
+			top: 40%;
+			left: 30%;
+			width: 194px;
+		}
+		
+		&_cloud-right {
+			position: absolute;
+			width: 155px;
+			top: 10%;
+			right: 15%;
 		}
 	}
 }

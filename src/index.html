@@ -100,8 +100,8 @@
 					<div class="h-blog__count">1 - <span></span></div>
 					<button class="h-blog__arr h-blog__arr_next"></button>
 				</div>
-				<img class="h-blog__img h-blog__img_cloud-right" src="./images/right-cloud.svg" alt="">
-				<img class="h-blog__img h-blog__img_cloud-left" src="./images/left-cloud.svg" alt="">
+				<img class="h-blog__img h-blog__img_cloud-right" src="./images/cloud-right.svg" alt="">
+				<img class="h-blog__img h-blog__img_cloud-left" src="./images/cloud-left.svg" alt="">
 				<img class="h-blog__img h-blog__img_plant" src="./images/plant.svg" alt="">
 			</div>
 		</div>
@@ -117,32 +117,26 @@
 					<span class="h-calculation__label">Ваш бюджет?</span>
 					<div class="h-calculation__range-block">
 						<div class="h-calculation__range-count"><span></span> ₽</div>
-						<input class="js-range" type="range" name="" value="10" min="5" max="200">
+						<input class="js-range" type="range" name="" value="1500000" min="50000" max="5000000">
 					</div>
 					<span class="h-calculation__label">Срок выполнения работ?</span>
 					<div class="h-calculation__range-block">
 						<div class="h-calculation__range-count"><span></span> месяца</div>
-						<input class="js-range" type="range" name="" value="10" min="5" max="200">
+						<input class="js-range" type="range" name="" value="4" min="1" max="12">
 					</div>
 				</div>
 				<div class="h-calculation__controls">
 					<div class="h-calculation__control">
 						<span>Хотел бы рассчитать проект лично</span>
-						<label class="h-calculation__switch switch">
-							<input type="checkbox"><span></span>
-						</label>
+						<input class="switch" name="self" type="checkbox">
 					</div>
 					<div class="h-calculation__control">
 						<span>Интересует больше чем один проект</span>
-						<label class="h-calculation__switch switch">
-							<input type="checkbox"><span></span>
-						</label>
+						<input class="switch" name="many" type="checkbox">
 					</div>
 					<div class="h-calculation__control">
 						<span>Интересует больше чем один проект</span>
-						<label class="h-calculation__switch switch">
-							<input type="checkbox"><span></span>
-						</label>
+						<input class="switch" type="checkbox">
 					</div>
 				</div>
 			</div>
@@ -199,11 +193,13 @@
 				</div>
 			</form>
 			<div class="h-order__side">
-				<img src="./images/camp.svg" alt="">
-				
+				<img class="h-order__img h-order__img_camp" src="./images/camp.svg" alt="">
+				<img class="h-order__img h-order__img_cloud-left" src="./images/cloud-left.svg" alt="">
+				<img class="h-order__img h-order__img_cloud-right" src="./images/cloud-right.svg" alt="">
 			</div>
 		</div>
 	</div>
 </section>
+
 
 @@include("_bottom.html")

@@ -1,4 +1,19 @@
 .switch {
 	$self: &;
-
+	@extend %reset-button;
+	width: 52px;
+	height: 27px;
+	background-color: #D4D7DF;
+	border: 5px solid #D4D7DF;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><circle id="round" class="cls-1" cx="8.5" cy="8.5" r="8.5" fill="#ffffff"/></svg>');
+	transition: background-position 0.15s ease-in-out;
+	
+	&:checked {
+		background-position: right center;
+		background-color: #00BCD0;
+		border: 5px solid #00BCD0;
+	}
 }
