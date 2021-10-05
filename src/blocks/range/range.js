@@ -38,19 +38,19 @@
 		let $scale = $bar.find('.range__scale');
 		let $handler = $bar.find('.range__handler');
 		let $output = $(this)
-						.parents('.h-calculation__range-block')
-						.find('.h-calculation__range-count span');
+						.parents('.h-calculation__range')
+						.find('.h-calculation__range-out span');
 
 		$scale.css({width: initial});
 		$handler.css({left: initial});
-		$output.text(`${$self.val()} ${declOfNum($self.val(), numeral)}`);
+		$output.text(`${new Intl.NumberFormat('ru-RU').format($self.val())} ${declOfNum($self.val(), numeral)}`);
 		
 		$self.on('change input', function(e) {
 			let value = getPercentage(this.value);
 
 			$scale.css({width: value});
 			$handler.css({left: value});
-			$output.text(`${getRound(this.value)} ${declOfNum(this.value, numeral)}`);
+			$output.text(`${new Intl.NumberFormat('ru-RU').format(getRound(this.value))} ${declOfNum(this.value, numeral)}`);
 		});
 	});
 })();

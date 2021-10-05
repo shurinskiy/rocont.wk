@@ -1,6 +1,10 @@
 .h-blog {
 	$self: &;
 	margin-bottom: 100px;
+	
+	@include media('<=lg') {
+		margin-bottom: 50px;
+	}
 
 	&__title {
 		&.title {
@@ -10,7 +14,10 @@
 
 	&__inner {
 		display: flex;
-		align-items: flex-start;
+		
+		@include media('<=md') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__slider {
@@ -47,9 +54,18 @@
 	&__images {
 		box-sizing: border-box;
 		width: 500px;
-		height: 330px;
+		min-height: 330px;
 		flex-shrink: 0;
+		overflow: hidden;
 		position: relative;
+		
+		@include media('<=xlg') {
+			width: 300px;
+		}
+		
+		@include media('<=lg') {
+			min-height: auto;
+		}
 	}
 	
 	&__img {
@@ -60,16 +76,32 @@
 		&_cloud-left {
 			top: 60px;			
 			left: 80px;
+			
+			@include media('<=xlg') {
+				left: 20px;
+			}
 		}
 		
 		&_cloud-right {
 			top: 0;			
 			right: 0;
+			
+			@include media('<=xlg') {
+				right: -120px;
+			}
 		}
 
 		&_plant {
 			bottom: 0;
 			right: 0;
+			
+			@include media('<=xlg') {
+				right: -105px;
+			}
+		}
+
+		@include media('<=md') {
+			display: none;
 		}
 	}
 
@@ -81,6 +113,11 @@
 		position: absolute;
 		bottom: 40px;
 		left: 60px;
+		
+		@include media('<=md') {
+			position: static;
+			padding-top: 30px;
+		}
 	}
 
 	&__count {

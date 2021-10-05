@@ -15,6 +15,29 @@ Swiper.use([Navigation]);
 			beforeInit: function(swiper) {
 				$('.h-blog__count').find('span').text(swiper.$el.find('.swiper-slide').length);
 			},
+		},
+		breakpoints: {
+			1100: { 
+				slidesPerView: 3,
+			},
+			960: { 
+				slidesPerView: 2,
+			},
+			780: { 
+				slidesPerView: 3,
+			},
+			640: { 
+				spaceBetween: 40,
+				slidesPerView: 2,
+			},
+			480: { 
+				spaceBetween: 20,
+				slidesPerView: 2,
+			},
+			0: { 
+				spaceBetween: 20,
+				slidesPerView: 1,
+			}
 		}
 	});
 

@@ -8,6 +8,7 @@
 
 	&__items {
 		display: flex;
+		flex-flow: row wrap;
 		margin: 0 -30px;
 	}
 
@@ -16,10 +17,19 @@
 		margin: 0 30px 30px;
 		font-size: 20px;
 		line-height: 1.1;
-		padding: 15px 0 0 85px;
+		padding: 0 0 0 85px;
+		min-height: 90px;
 		background-repeat: no-repeat;
-		background-position: center left;
+		background-position: top left;
 		width: calc(100% / 4 - 60px);
+		
+		@include media('<=lg') {
+			width: calc(100% / 2 - 60px);
+		}
+		
+		@include media('<=xs') {
+			width: calc(100% / 1 - 60px);
+		}
 
 		&_1 {
 			background-image: url('./images/benefits-1.svg');

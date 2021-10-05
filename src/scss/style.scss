@@ -3,6 +3,7 @@
 
 // Include breakpoints badge
 body { @include screen-media(); }
+// div { @include outline(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -67,3 +68,4 @@ body, html {
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+
