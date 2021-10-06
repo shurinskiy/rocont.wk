@@ -9,6 +9,11 @@ Swiper.use([Navigation, Autoplay]);
 			nextEl: '.h-hero__arr_next',
 			prevEl: '.h-hero__arr_prev',
 		},
+		on: {
+			beforeInit: function(swiper) {
+				$('.h-hero__count').find('span').text(swiper.$el.find('.swiper-slide').length);
+			},
+		},
 		autoplay: {
 			delay: 20000,
 			disableOnInteraction: false

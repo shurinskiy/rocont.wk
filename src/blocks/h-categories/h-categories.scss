@@ -6,8 +6,9 @@
 		grid-template: auto / repeat(auto-fit, minmax(150px, auto));
 		margin-bottom: 30px;
 		
-		@include media('<=xlg') {
-
+		@include media('<=md') {
+			display: flex;
+			overflow: auto;
 		}
 	}
 
@@ -20,6 +21,10 @@
 		font-size: 15px;
 		color: inherit;
 		text-decoration: none;
+		
+		@include media('<=md') {
+			min-width: 140px;
+		}
 		
 		span {
 			display: block;

@@ -11,9 +11,19 @@
 		flex-flow: row wrap;
 		justify-content: space-between;
 		align-items: center;		
+		
+		@include media('<=md') {
+			flex-flow: row nowrap;
+			overflow: auto;
+		}
 	}
-
+	
 	&__item {
 		padding: 10px;
+		text-align: center;
+		
+		@include media('<=md') {
+			min-width: 180px;
+		}
 	}
 }

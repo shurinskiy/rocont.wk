@@ -111,18 +111,53 @@
 		}
 	}
 
-	&__arr {
-		@extend %reset-button;
+	&__navi {
 		position: absolute;
 		z-index: 1;
 		bottom: 0;
+		left: 140px;
+		width: calc(100% - 280px);
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media('<=xxxlg') {
+			left: 30px;
+			width: calc(100% - 60px);
+		}
+
+		@include media('<=sm') {
+			width: auto;
+		}
+	}
+
+	&__count {
+		display: none;
+		font-size: 20px;
+		line-height: 1.2;
+		margin: 0 20px;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__arr {
+		@extend %reset-button;
 		width: 50px;
 		height: 32px;
 		opacity: 0.7;
+
+		@include media('<=sm') {
+			width: 60px;
+			height: 30px;
+			background-size: 100px 16px !important;
+		}
 		
 		&_prev {
 			left: 140px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center / 46px 30px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center left / 177px 31px no-repeat transparent;
 
 			@include media('<=xxxlg') {
 				left: 30px;
@@ -131,7 +166,7 @@
 		
 		&_next {
 			right: 140px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / 46px 30px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 177px 31px no-repeat transparent;
 
 			@include media('<=xxxlg') {
 				right: 30px;

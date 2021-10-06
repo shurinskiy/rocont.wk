@@ -3,6 +3,10 @@
 	background-color: #2E2E2E;
 	color: #fff;
 	font-family: "ML", sans-serif;
+		
+	@include media('<=sm') {
+		padding: 40px 0 0;
+	}
 
 	&__top {
 		box-sizing: border-box;
@@ -10,16 +14,38 @@
 		min-height: 130px;
 		display: flex;
 		align-items: center;
-	}
 
+		@include media('<=md') {
+			flex-wrap: wrap;
+		}
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+		}
+	}
+	
 	&__logo {
 
+		@include media('<=sm') {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__navi {
 		display: flex;
 		align-items: center;
 		margin: 0 auto;
+
+		@include media('<=md') {
+			order: 1;
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		@include media('<=sm') {
+			display: block;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__navi-link {
@@ -29,6 +55,16 @@
 		font-size: 20px;
 		line-height: 1.2;
 		white-space: nowrap;
+		
+		@include media('<=md') {
+			padding: 10px;
+		}
+		
+		@include media('<=sm') {
+			display: block;
+			font-size: 15px;
+			text-align: center;
+		}
 	}
 
 	&__socials {
@@ -38,10 +74,23 @@
 		@include media('<=lg') {
 			display: none;
 		}
+		
+		@include media('<=md') {
+			display: flex;
+		}
+		
+		@include media('<=sm') {
+			order: 1;
+			margin-bottom: 20px;
+		}
 
 		span {
 			margin-right: 10px;
 			white-space: nowrap;
+
+			@include media('<=sm') {
+				display: none;
+			}
 		}
 
 		&_bottom {
@@ -49,6 +98,10 @@
 
 			@include media('<=lg') {
 				display: flex;
+			}
+
+			@include media('<=md') {
+				display: none;
 			}
 		}
 	}
@@ -75,12 +128,25 @@
 		height: 100px;
 		background: url('#{$images-path}icons-sprite.svg#icon-arr-up-long-view-white') center / 22px 93px no-repeat transparent;
 		margin-left: auto;
+		
+		@include media('<=md') {
+			background-position: center top;
+			height: 80px;
+		}
+
+		@include media('<=sm') {
+			display: none;
+		}
 	}
 
 	&__divider {
 		border: none;
 		border-top: 1px solid #fff;
 		margin: 0;
+
+		@include media('<=sm') {
+			display: none;			
+		}
 	}
 
 	&__bottom {
@@ -92,6 +158,14 @@
 
 		@include media('<=lg') {
 			flex-wrap: wrap;
+		}
+
+		@include media('<=md') {
+			justify-content: space-between;
+		}
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
 		}
 	}
 
@@ -107,9 +181,20 @@
 		display: flex;
 		align-items: center;
 		margin-right: 30px;
+
+		@include media('<=sm') {
+			padding: 0;
+			text-align: center;
+			margin: 0 0 20px;
+			background: none !important;		
+		}
 		
 		&_adrs {
 			background: url('#{$images-path}icons-sprite.svg#icon-smart-view-white') center left / 23px 30px no-repeat transparent;
+
+			@include media('<=sm') {
+				max-width: 270px;
+			}
 		}
 		
 		&_email {
@@ -122,23 +207,46 @@
 		}
 	}
 
+	&__bottom-wrap {
+		display: flex;
+		margin-left: auto;
+		
+		@include media('<=lg') {
+			width: 100%;		
+		}
+		
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+		}
+	}
+
 	&__politics {
 		color: #fff;
-		margin: 0 25px 0 auto;
+		margin: 0 25px 0 0;
 		font-size: 15px;
 		line-height: 1.2;
 		
 		@include media('<=lg') {
 			margin: 40px auto 0;
 		}
+		
+		@include media('<=sm') {
+			text-align: center;
+			margin: 0 auto 5px;
+		}
 	}
 	
 	&__copy {
 		font-size: 15px;
 		line-height: 1.2;
-
+		
 		@include media('<=lg') {
 			margin: 40px auto 0;
+		}
+		
+		@include media('<=sm') {
+			text-align: center;
+			margin: 0 auto;
 		}
 	}
 }

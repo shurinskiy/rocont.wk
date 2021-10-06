@@ -121,17 +121,21 @@
 	}
 
 	&__count {
-
+		margin: 0 20px;
 	}
 
 	&__arr {
 		@extend %reset-button;
-		width: 50px;
+		width: 30px;
 		height: 30px;
+
+		@include media('<=sm') {
+			width: 60px;
+		}		
 		
 		&_prev {
 			left: 140px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center / 24px 16px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center left / 100px 16px no-repeat transparent;
 
 			@include media('<=xxxlg') {
 				left: 30px;
@@ -140,7 +144,7 @@
 		
 		&_next {
 			right: 140px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center / 24px 16px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 100px 16px no-repeat transparent;
 
 			@include media('<=xxxlg') {
 				right: 30px;
@@ -148,4 +152,3 @@
 		}
 	}
 }
-

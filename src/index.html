@@ -43,8 +43,11 @@
 					</div>
 				</div>
 			</div>
-			<button class="h-hero__arr h-hero__arr_prev"></button>
-			<button class="h-hero__arr h-hero__arr_next"></button>
+			<div class="h-hero__navi">
+				<button class="h-hero__arr h-hero__arr_prev"></button>
+				<div class="h-hero__count">1 | <span></span></div>
+				<button class="h-hero__arr h-hero__arr_next"></button>
+			</div>
 		</div>
 	</div>
 </section>
@@ -97,7 +100,7 @@
 			<div class="h-blog__images">
 				<div class="h-blog__navi">
 					<button class="h-blog__arr h-blog__arr_prev"></button>
-					<div class="h-blog__count">1 - <span></span></div>
+					<div class="h-blog__count">1 | <span></span></div>
 					<button class="h-blog__arr h-blog__arr_next"></button>
 				</div>
 				<img class="h-blog__img h-blog__img_cloud-right" src="./images/cloud-right.svg" alt="">
@@ -186,20 +189,22 @@
 		<div class="h-order__inner">
 			<form class="h-order__form" action="./">
 				<h2 class="h-order__title title">Оставьте заявку чтобы начать проект</h2>
-				<div class="h-order__field">
-					<label for="">Ваше имя</label>
-					<input type="text" placeholder="Введите имя">
-				</div>
-				<div class="h-order__field">
-					<label for="">Ваш email</label>
-					<input type="text" placeholder="Введите почту">
-				</div>
-				<div class="h-order__field">
-					<label for="">Ваш телефон</label>
-					<input type="text" placeholder="Введите номер телефона">
-				</div>
-				<div class="h-order__field">
-					<input type="submit" value="Начать проект">
+				<div class="h-order__fields">
+					<div class="h-order__field">
+						<label for="">Ваше имя</label>
+						<input type="text" placeholder="Введите имя">
+					</div>
+					<div class="h-order__field">
+						<label for="">Ваш email</label>
+						<input type="text" placeholder="Введите почту">
+					</div>
+					<div class="h-order__field">
+						<label for="">Ваш телефон</label>
+						<input type="text" placeholder="Введите номер телефона">
+					</div>
+					<div class="h-order__field">
+						<input type="submit" value="Начать проект">
+					</div>
 				</div>
 			</form>
 			<div class="h-order__side">
