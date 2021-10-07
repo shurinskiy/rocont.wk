@@ -40,11 +40,9 @@ import scrollLock from 'scroll-lock';
 		}
 	});
 
-	$('a[href^="#"]').on('click', function(e) {
+	$(".footer__up-btn").on('click', function(e) {
 		e.preventDefault();
-		var $element = $($(this).attr('href'));
-	
-		$("html, body").animate({ scrollTop: $element.offset().top }, "slow");
-	});
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	});	
 
 })();

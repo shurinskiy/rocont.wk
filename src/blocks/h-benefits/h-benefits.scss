@@ -10,6 +10,10 @@
 		display: flex;
 		flex-flow: row wrap;
 		margin: 0 -30px;
+		
+		@include media('<=xs') {
+			margin: 0 -15px;
+		}
 	}
 
 	&__item {
@@ -28,7 +32,8 @@
 		}
 		
 		@include media('<=xs') {
-			width: calc(100% / 1 - 60px);
+			margin: 0 15px 30px;
+			width: calc(100% / 1 - 30px);
 		}
 
 		&_1 {

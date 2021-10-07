@@ -31,12 +31,21 @@
 		align-content: flex-start;
 		padding: 0 0 40px;
 		margin: 0 -20px;
+		
+		@include media('<=xs') {
+			margin: 0;
+		}
 	}
 
 	&__field {
 		box-sizing: border-box;
-		width: calc(50% - 40px);
 		margin: 0 20px 25px;
+		width: calc(50% - 40px);
+		
+		@include media('<=xs') {
+			margin: 0 auto 25px;
+			width: 100%;
+		}
 
 		label {
 			display: block;
@@ -63,6 +72,10 @@
 			font-size: 20px;
 			line-height: 1.25;
 			margin-top: 33px;
+			
+			@include media('<=xs') {
+				margin-top: 10px;
+			}
 		}
 	}
 

@@ -5,4 +5,8 @@
 	margin: 0 auto;
 	padding: 0 30px;
 	width: 100%;
+	
+	@include media('<=xs') {
+		padding: 0 15px;
+	}
 }
