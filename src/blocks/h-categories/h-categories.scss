@@ -2,12 +2,16 @@
 	$self: &;
 
 	&__inner {
-		display: grid;
-		grid-template: auto / repeat(auto-fit, minmax(150px, auto));
+		// display: grid;
+		// grid-template: auto / repeat(auto-fit, minmax(150px, auto));
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding: 8px;
 		margin-bottom: 30px;
 		
 		@include media('<=md') {
-			display: flex;
+			flex-wrap: nowrap;
 			overflow: auto;
 		}
 	}
@@ -15,12 +19,14 @@
 	&__link {
 		box-sizing: border-box;
 		text-align: center;
-		padding: 40px 10px 30px;
+		padding: 60px 10px 10px;
 		font-family: "ML", sans-serif;
 		line-height: 1.2;
 		font-size: 15px;
 		color: inherit;
+		width: 120px;
 		text-decoration: none;
+		transition: box-shadow 0.4s ease;
 		
 		@include media('<=md') {
 			min-width: 140px;
@@ -31,37 +37,74 @@
 			max-width: 100px;
 			margin: 0 auto;
 		}
+
+		&:hover {
+			box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+			color: #00BCD0;
+		}
 		
 		&_1 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-1-view-black') center top / 32px 33px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-1-view-black') center top 20px / 32px 33px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-1-view-green');
+			}
 		}
 		
 		&_2 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-2-view-black') center top / 27px 33px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-2-view-black') center top 20px / 27px 33px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-2-view-green');
+			}
 		}
 		
 		&_3 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-3-view-black') center top / 34px 33px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-3-view-black') center top 20px / 34px 33px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-3-view-green');
+			}
 		}
 		
 		&_4 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-4-view-black') center top / 35px 32px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-4-view-black') center top 20px / 35px 32px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-4-view-green');
+			}
 		}
 		
 		&_5 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-5-view-black') center top / 32px 32px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-5-view-black') center top 20px / 32px 32px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-5-view-green');
+			}
 		}
 		
 		&_6 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-6-view-black') center top / 31px 31px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-6-view-black') center top 20px / 31px 31px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-6-view-green');
+			}
 		}
 
 		&_7 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-7-view-black') center top / 35px 32px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-7-view-black') center top 20px / 35px 32px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-7-view-green');
+			}
 		}
 
 		&_8 {
-			background: url('#{$images-path}icons-sprite.svg#icon-cat-8-view-black') center top / 35px 32px no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-cat-8-view-black') center top 20px / 35px 32px no-repeat transparent;
+			
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-cat-8-view-green');
+			}
 		}
 	}
 }

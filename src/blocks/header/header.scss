@@ -71,6 +71,7 @@
 	&__navi {
 		display: flex;
 		align-items: center;
+		// justify-content: space-between;
 		margin: 0 auto;
 		
 		@include media('<=lg') {
@@ -86,6 +87,28 @@
 		font-size: 20px;
 		line-height: 1.2;
 		white-space: nowrap;
+		position: relative;
+
+		&::after {
+			content: '';
+			box-sizing: border-box;
+			display: block;
+			position: absolute;
+			background-color: #00BCD0;
+			transition: width 0.3s;
+			left: 10px; bottom: 7px;
+			height: 2px;
+			width: 0;
+		}
+		
+		&:hover {
+			// font-family: "MR", sans-serif;
+			// letter-spacing: -0.035em;
+		
+			&::after {
+				width: calc(100% - 20px);
+			}
+		}
 		
 		@include media('<=xlg') {
 			font-size: 18px;
@@ -120,6 +143,11 @@
 		white-space: nowrap;
 		padding-left: 40px;
 		background: url('#{$images-path}icons-sprite.svg#icon-call-view-black') center left / 23px 23px no-repeat transparent;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: #00BCD0;
+		}
 		
 		@include media('<=xlg') {
 			font-size: 18px;
@@ -209,6 +237,12 @@
 		text-decoration: none;
 		font-size: 20px;
 		border-bottom: 1px solid #000;
+		transition: color 0.3s ease, border-color 0.3s ease;
+
+		&:hover {
+			color: #00BCD0;
+			border-color: #00BCD0;
+		}
 		
 		@include media('<=xlg') {
 			font-size: 18px;

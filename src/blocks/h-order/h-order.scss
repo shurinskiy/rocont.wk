@@ -63,15 +63,39 @@
 			font-size: 14px;
 		}
 
-		input[type="submit"] {
+		button[type="submit"] {
 			@extend %reset-button;
-			padding: 15px 10px;
-			background-color: #fff;
+			position: relative;
 			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
-			width: 100%;
-			font-size: 20px;
+			font-family: "ML", sans-serif;
+			background-color: #fff;
+			padding: 15px 10px;
 			line-height: 1.25;
 			margin-top: 33px;
+			font-size: 20px;
+			width: 100%;
+			
+			&::before {
+				content: '';
+				display: none;
+				position: absolute;
+				background-color: #00BCD0;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+				left: 0;
+				bottom: 0; 
+				@keyframes button_bg {
+					from {}
+					to { height: 3px; }
+				}
+				animation: button_bg 0.2s ease-out;
+				animation-fill-mode: forwards;
+			}
+
+			&:hover::before {
+				display: block;
+			}
 			
 			@include media('<=xs') {
 				margin-top: 10px;

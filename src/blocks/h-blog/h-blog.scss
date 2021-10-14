@@ -49,6 +49,11 @@
 		color: inherit;
 		font-size: 12px;
 		line-height: 1.1;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: #00BCD0;
+		}
 	}
 
 	&__images {
@@ -115,6 +120,7 @@
 		font-size: 20px;
 		line-height: 1.1;
 		position: absolute;
+		z-index: 3;
 		bottom: 40px;
 		left: 60px;
 		
@@ -145,6 +151,10 @@
 			left: 140px;
 			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center left / 100px 17px no-repeat transparent;
 
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-green')	
+			}
+
 			@include media('<=xxxlg') {
 				left: 30px;
 			}
@@ -153,6 +163,10 @@
 		&_next {
 			right: 140px;
 			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 100px 17px no-repeat transparent;
+
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-green')	
+			}
 
 			@include media('<=xxxlg') {
 				right: 30px;
