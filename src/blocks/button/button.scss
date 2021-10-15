@@ -1,4 +1,39 @@
 .button {
 	$self: &;
+	@extend %reset-button;
+	position: relative;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+	font-family: "ML", sans-serif;
+	background-color: #fff;
+	text-align: center;
+	padding: 15px 10px;
+	line-height: 1.25;
+	font-size: 20px;
+	
+	&::before {
+		content: '';
+		display: none;
+		position: absolute;
+		background-color: #00BCD0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		left: 0;
+		bottom: 0; 
+		@keyframes button_bg {
+			from {}
+			to { height: 3px; }
+		}
+		animation: button_bg 0.2s ease-out;
+		animation-fill-mode: forwards;
+	}
 
+	&:hover::before {
+		display: block;
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
 }

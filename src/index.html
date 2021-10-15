@@ -26,7 +26,7 @@
 					<div class="h-hero__side">
 						<h2 class="h-hero__title">ROCONT — Ваш ключ к интернет-маркетингу</h2>
 						<div class="h-hero__text">Rocont Advertising - международное рекламное агентство полного цикла, занимающееся онлайн и оффлайн продвижением. Наша специализация - комплексное продвижение в интернете, брендирование и оффлайн реклама.</div>
-						<a class="h-hero__button" href="./"><span>Начать проект</span></a>
+						<a class="h-hero__button button" href="./"><span>Начать проект</span></a>
 					</div>
 					<img class="h-hero__img h-hero__img_town" src="./images/hero-town.svg" alt="">
 					<img class="h-hero__img h-hero__img_human" src="./images/hero-human.svg" alt="">
@@ -103,7 +103,7 @@
 <section class="h-calculation">
 	<div class="container">
 		<h2 class="h-calculation__title title">Предварительный расчет</h2>
-		<div class="h-calculation__inner">
+		<form action="./" class="h-calculation__inner">
 			<div class="h-calculation__dashboard">
 				<div class="h-calculation__ranges">
 					<span class="h-calculation__label">Ваш бюджет?</span>
@@ -151,10 +151,24 @@
 					<li>- Личная встреча с нашим менеджером</li>
 					<li>- Бесплатный анализ Вашего бизнеса</li>
 				</ul>
-				<a href="" class="h-calculation__button button">Предварительный расчет</a>
+				<div class="h-calculation__personals">
+					<div class="h-calculation__field">
+						<label for="">Ваше имя</label>
+						<input type="text">
+					</div>
+					<div class="h-calculation__field">
+						<label for="">Ваш email</label>
+						<input type="text">
+					</div>
+					<div class="h-calculation__field">
+						<label for="">Ваш телефон</label>
+						<input type="text">
+					</div>
+				</div>
+				<button class="h-calculation__button" type="submit">Предварительный расчет</button>
 				<span class="h-calculation__note">*Предварительный расчет не является публичной офертой</span>
 			</div>
-		</div>
+		</form>
 	</div>
 </section>
 
@@ -192,9 +206,14 @@
 						<input type="text" placeholder="Введите номер телефона">
 					</div>
 					<div class="h-order__field">
-						<button type="submit">Начать проект</button>
+						<button class="button" type="submit">Начать проект</button>
 					</div>
 				</div>
+				<div class="h-order__agree">
+					<input class="h-order__agree-check" type="checkbox">
+					<p class="h-order__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
+				</div>
+				<div class="h-order__politic">Ваши личные данные будут использоваться для оперативной связи с Вами. Rocont обеспечивает защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="./">«Политика безопасности»</a></div>
 			</form>
 			<div class="h-order__side">
 				<img class="h-order__img h-order__img_camp" src="./images/camp.svg" alt="">
