@@ -6,6 +6,7 @@
 	font-family: "ML", sans-serif;
 	background-color: #fff;
 	text-align: center;
+	white-space: nowrap;
 	padding: 15px 10px;
 	line-height: 1.25;
 	font-size: 20px;
@@ -35,5 +36,44 @@
 	span {
 		position: relative;
 		z-index: 2;
+	}
+
+	&_arr {
+		border: 1px solid #00BCD0;
+		padding: 20px;
+		box-shadow: none;
+		
+		&::before {
+			display: none !important;
+		}
+
+		&::after {
+			vertical-align: middle;
+			display: inline-block;
+			transition: transform 0.3s ease;
+			content: '';
+			width: 45px;
+			height: 30px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 177px 32px no-repeat transparent;
+			margin-left: 15px;
+			
+			@include media('<=xxs') {
+				margin-left: 10px;
+			}
+			
+			@include media('<=xxxs') {
+				display: none;
+			}
+		}
+
+		&:hover {
+			background-color: #00BCD0;
+			color: #fff;
+
+			&::after {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-white');
+				transform: translateX(20px);
+			}
+		}
 	}
 }

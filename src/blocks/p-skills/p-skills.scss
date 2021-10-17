@@ -1,0 +1,79 @@
+.p-skills {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__slider {
+		box-sizing: border-box;
+		padding: 20px;
+	}
+
+	&__item {
+		// @include outline();
+		box-sizing: border-box;
+		height: auto;
+		display: flex;
+		text-decoration: none;
+		color: inherit;
+		align-items: center;
+		padding: 50px 20px 20px 30px;
+		background-color: #fff;
+		border-radius: 40px;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.07);
+		
+		@include media('<=lg') {
+			border-radius: 30px;
+		}
+		
+		@include media('<=md') {
+			border-radius: 20px;
+		}
+	}
+
+	&__side {
+		max-width: 150px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-size: 22px;
+		line-height: 1.4;
+
+		span:nth-child(1) {
+			display: block;
+			font-family: "MB", sans-serif;
+		}
+		
+		span:nth-child(2) {
+			display: block;
+			
+		}
+	}
+
+	&__text {
+		font-family: "MB", sans-serif;
+		font-size: 6px;
+		line-height: 1.8;
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		@extend %reset-button;
+		text-transform: uppercase;
+		background-color: #3fb8a9;
+		color: #fff;
+		font-size: 6px;
+		border-radius: 15px;
+		padding: 8px 20px;
+		font-family: "ML", sans-serif;
+		box-shadow: 0 5px 5px rgba(63, 184, 170, 0.4);
+		
+		&_lilack {
+			background-color: #7660a9;
+			box-shadow: 0 5px 5px rgba(118, 96, 169, 0.4);
+		}
+	}
+
+	&__image {
+
+	}
+}

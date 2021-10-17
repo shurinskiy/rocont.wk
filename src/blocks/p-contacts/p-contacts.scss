@@ -1,0 +1,84 @@
+.p-contacts {
+	$self: &;
+	margin-bottom: 50px;
+
+	&__title {
+
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__text {
+		box-sizing: border-box;
+		max-width: 930px;
+		font-size: 20px;
+		line-height: 1.3;
+		padding-right: 50px;
+		
+		@include media('<=lg') {
+			width: 55%;
+			flex-shrink: 1;
+		}
+
+		@include media('<=sm') {
+			width: auto;
+			margin-bottom: 40px;
+			padding: 0;
+			font-size: 16px;
+		}
+	}
+	
+	&__side {
+		width: 500px;
+		flex-shrink: 0;
+		
+		@include media('<=lg') {
+			width: 45%;
+			flex-shrink: 1;
+		}
+
+		@include media('<=sm') {
+			width: auto;
+		}
+	}
+
+	&__entry {
+		display: block;
+		box-sizing: border-box;
+		max-width: 430px;
+		font-size: 19px;
+		line-height: 1.3;
+		color: inherit;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		min-height: 50px;
+		margin-bottom: 30px;
+		padding-left: 40px;
+
+		&_adrs {
+			background: url('#{$images-path}icons-sprite.svg#icon-smart-view-black') center left / 26px 32px no-repeat transparent;
+		}
+
+		&_phon {
+			background: url('#{$images-path}icons-sprite.svg#icon-call-view-black') center left / 25px 25px no-repeat transparent;
+			white-space: nowrap;
+		}
+		
+		&_mail {
+			background: url('#{$images-path}icons-sprite.svg#icon-email-view-black') center left / 25px 25px no-repeat transparent;
+		}
+	}
+
+	&__callback {
+		width: 100%;
+		max-width: 300px;
+	}
+}

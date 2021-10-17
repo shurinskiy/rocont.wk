@@ -1,0 +1,106 @@
+.p-clients {
+	$self: &;
+	margin-bottom: 100px;
+
+	&__title {
+
+	}
+
+	&__items {
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -15px 60px;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		background-color: #f2feff;
+		display: flex;
+		flex-flow: column nowrap;
+		border-radius: 21px;
+		padding: 0 20px 20px;
+		margin: 0 15px 30px;
+		width: calc(100% / 5 - 30px);
+		
+		@include media('<=xxlg') {
+			width: calc(100% / 4 - 30px);
+		}
+		
+		@include media('<=lg') {
+			width: calc(100% / 3 - 30px);
+		}
+		
+		@include media('<=sm') {
+			width: calc(100% / 2 - 30px);
+		}
+		
+		@include media('<=xxs') {
+			width: calc(100% / 1 - 30px);
+		}
+	}
+
+	&__image {
+		display: block;
+		box-sizing: border-box;
+		background-color: #fff;
+		color: inherit;
+		text-decoration: none;
+		padding: 20px;
+		margin: 0 -20px 20px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
+		border-radius: 21px 21px 0 0;
+		min-height: 190px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__subtitle {
+		font-family: "MR", sans-serif;
+		font-size: 18px;
+		line-height: 1.4;
+		margin-bottom: 20px;
+	}
+
+	&__skills {
+		margin-bottom: 20px;
+	}
+
+	&__skill {
+		min-height: 40px;
+		display: flex;
+		align-items: center;
+		padding-left: 45px;
+		flex-shrink: 0;
+		margin-bottom: 10px;
+
+		&_dev {
+			background: url('#{$images-path}icons-sprite.svg#icon-portfolio-2-view-black') center left / 38px 38px no-repeat transparent;
+		}
+		
+		&_adv {
+			background: url('#{$images-path}icons-sprite.svg#icon-portfolio-1-view-black') center left / 33px 30px no-repeat transparent;
+					}
+		
+		&_des {
+			background: url('#{$images-path}icons-sprite.svg#icon-portfolio-3-view-black') center left / 33px 33px no-repeat transparent;
+		}
+		
+		&_cam {
+			background: url('#{$images-path}icons-sprite.svg#icon-portfolio-4-view-black') center left / 28px 21px no-repeat transparent;
+		}
+	}
+
+	&__button {
+		margin-top: auto;
+	}
+
+	&__portfolio {
+		width: 100%;
+		max-width: 300px;
+
+		@include media('<=xxs') {
+			max-width: none;
+		}
+	}
+}

@@ -1,7 +1,10 @@
 .header {
 	$self: &;
 	font-family: "ML", sans-serif;
-	margin-bottom: 40px;
+	
+	&_home {
+		margin-bottom: 40px;
+	}
 
 	&__inner {
 		box-sizing: border-box;
@@ -144,6 +147,7 @@
 		padding-left: 40px;
 		background: url('#{$images-path}icons-sprite.svg#icon-call-view-black') center left / 23px 23px no-repeat transparent;
 		transition: color 0.3s ease;
+		margin-right: 20px;
 
 		&:hover {
 			color: #00BCD0;

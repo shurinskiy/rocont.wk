@@ -21,4 +21,28 @@
 			left: -155px;
 		}
 	}
+
+	&_big {
+		font-size: 40px;
+		
+		&::before {
+			top: 23px;
+		}
+
+		@include media('<=lg') {
+			font-size: 30px;
+		
+			&::before {
+				top: 17px;
+			}
+		}
+
+		@include media('<=xxs') {
+			font-size: 25px;
+		
+			&::before {
+				top: 15px;
+			}
+		}
+	}
 }

@@ -1,0 +1,40 @@
+.p-achieve {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__title {
+
+	}
+
+	&__items {
+
+	}
+	
+	&__item {
+		box-sizing: border-box;
+	}
+
+	&__image {
+		display: block;
+		height: 170px;
+		margin-bottom: 15px;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__item-title {
+		font-family: "MR", sans-serif;
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+
+	&__item-text {
+		font-size: 15px;
+		line-height: 1.4;
+	}
+}

@@ -237,46 +237,9 @@
 	}
 	
 	&__button {
-		@extend %reset-button;
 		display: block;
 		width: 100%;
 		margin: auto auto 10px;
-		border: 1px solid #00BCD0;
-		padding: 20px 10px;
-		text-align: center;
-		font-family: "ML", sans-serif;
-		font-size: 20px;
-		line-height: 1.3;
-		white-space: nowrap;
-		
-		&::after {
-			vertical-align: middle;
-			display: inline-block;
-			transition: transform 0.3s ease;
-			content: '';
-			width: 45px;
-			height: 30px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 177px 32px no-repeat transparent;
-			margin-left: 15px;
-			
-			@include media('<=xxs') {
-				margin-left: 10px;
-			}
-			
-			@include media('<=xxxs') {
-				display: none;
-			}
-		}
-
-		&:hover {
-			background-color: #00BCD0;
-			color: #fff;
-
-			&::after {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-white');
-				transform: translateX(20px);
-			}
-		}
 
 		@include media('<=xxs') {
 			font-size: 16px;
