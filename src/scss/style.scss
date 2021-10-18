@@ -39,9 +39,9 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
-@include font-face("MicrosoftYaHei", "MR");
-@include font-face("MicrosoftYaHeiBold", "MB");
-@include font-face("MicrosoftYaHeiLight", "ML");
+@include font-face("Montserrat-Regular", "MR");
+@include font-face("Montserrat-Bold", "MB");
+@include font-face("Montserrat-Light", "ML");
 
 @import "../../node_modules/swiper/swiper.scss";
 
