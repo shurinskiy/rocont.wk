@@ -40,7 +40,8 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
 @include font-face("Montserrat-Regular", "MR");
-@include font-face("Montserrat-Bold", "MB");
+@include font-face("Montserrat-SemiBold", "MSB");
+@include font-face("Montserrat-Medium", "MM");
 @include font-face("Montserrat-Light", "ML");
 
 @import "../../node_modules/swiper/swiper.scss";
