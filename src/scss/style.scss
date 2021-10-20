@@ -45,6 +45,8 @@ $breakpoints: (
 @include font-face("Montserrat-Light", "ML");
 
 @import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox";
+
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";

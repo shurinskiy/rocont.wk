@@ -5,3 +5,5 @@ import "../blocks/range/range.js";
 import "../blocks/h-calculation/h-calculation.js";
 import "../blocks/p-skills/p-skills.js";
 import "../blocks/p-achieve/p-achieve.js";
+import "../blocks/p-gallery/p-gallery.js";
+import "../blocks/p-composition/p-composition.js";
