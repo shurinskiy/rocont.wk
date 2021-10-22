@@ -125,12 +125,15 @@ function styles() {
 }
 
 function images() {
-	return $.del([pth.pbl.img+'*']).then(function(paths) {
+/* 	return $.del([pth.pbl.img+'*']).then(function(paths) {
 		gulp.src(pth.src.img)
 		.pipe(gulp.dest(pth.pbl.img))
 		.pipe($.if(isSync, $.browserSync.stream()));
 		console.log('Deleted files and folders:\n', paths.join('\n'));
-	});
+	}); */
+	return gulp.src(pth.src.img)
+		.pipe(gulp.dest(pth.pbl.img))
+		.pipe($.if(isSync, $.browserSync.stream()));
 }
 
 function icons() {
