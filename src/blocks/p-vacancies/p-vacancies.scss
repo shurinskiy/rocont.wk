@@ -1,0 +1,105 @@
+.p-vacancies {
+	$self: &;
+	margin-bottom: 40px;
+
+	&__title {
+
+	}
+
+	&__items {
+
+	}
+
+	&__item {
+		margin-bottom: 50px;
+		font-size: 20px;
+		line-height: 1.3;
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 16px;
+		}
+	}
+
+	&__item-title {
+		font-family: "MM", sans-serif;
+		font-size: 30px;
+		line-height: 1.3;
+		margin-bottom: 15px;
+		
+		@include media('<=md') {
+			font-size: 25px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+	
+	&__salary {
+		font-size: 25px;
+		line-height: 1.3;
+		color: #bbb;
+		margin-bottom: 20px;
+		
+		@include media('<=sm') {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__intro {
+
+	}
+
+	&__hidden {
+		padding-top: 20px;
+		display: none;
+
+		p, ul, li {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__button {
+		display: block;
+		width: 100%;
+		max-width: 320px;
+		margin: 0 0 -50px auto;
+
+		@include media('<=xs') {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&__more {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 1.3;
+		text-decoration: none;
+		color: #00BCD0;
+
+		span {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-green') center right / 100px 17px no-repeat transparent;
+			vertical-align: middle;
+			transition: transform 0.3s;
+		}
+
+		&.opened::after {
+			transform: rotate(-90deg);
+		}
+	}
+}

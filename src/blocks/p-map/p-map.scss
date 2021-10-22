@@ -2,10 +2,19 @@
 	$self: &;
 	position: relative;
 
-	iframe {
+	&__yamap {
 		background: url('./images/p-map-bg.jpg') center / auto no-repeat transparent;
 		display: block;
-		filter: saturate(0.0);
+		min-height: 720px;
+		overflow: hidden;
+
+		ymaps[class$="ground-pane"] {
+			filter: saturate(0.0);
+		}
+
+		ymaps[class$="copyrights-pane"] {
+			display: none;
+		}
 	}
 
 	&__flyer {
