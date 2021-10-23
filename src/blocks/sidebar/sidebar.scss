@@ -1,0 +1,90 @@
+.sidebar {
+	$self: &;
+	display: flex;
+	flex-flow: column nowrap;
+
+	&__top {
+		margin-bottom: 40px;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+
+		span {
+			margin-right: auto;
+		}
+	}
+
+	&__social {
+		height: 30px;
+		width: 30px;
+		margin-left: 8px;
+		flex-shrink: 0;
+
+		&_vk {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-vk-fill-view-white') center / 22px 12px no-repeat #000;
+		}
+		
+		&_fb {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-fb-view-white') center / 18px 18px no-repeat #000;
+		}
+		
+		&_inst {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-instagram-view-white') center / 18px 18px no-repeat #000;
+		}
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+
+	&__flyer {
+		box-sizing: border-box;
+		position: sticky;
+		top: 20px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
+		padding: 35px 30px 10px;
+		overflow: hidden;
+		
+		@include media('<=md') {
+			display: none;
+		}
+	}
+
+	&__link {
+		margin-bottom: 20px;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 150px;
+			background-color: #00bcd0;
+			position: absolute;
+			top: calc(50% - 1px);
+			left: -158px;
+			opacity: 0;
+			z-index: 1;
+			transition: opacity 0.3s;
+		}
+		
+		a {
+			color: inherit;
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+		
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+
+			a {
+				color: #00BCD0;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.layout {
+	$self: &;
+	display: flex;
+	margin-bottom: 100px;
+		
+	@include media('<=md') {
+		flex-wrap: wrap;
+	}
+
+	&__content {
+		box-sizing: border-box;
+		padding-right: 60px;
+		
+		@include media('<=lg') {
+			padding-right: 30px;
+		}
+		
+		@include media('<=md') {
+			padding-right: 0;
+		}
+	}
+	
+	&__side {
+		box-sizing: border-box;
+		width: 360px;
+		flex-shrink: 0;
+		
+		@include media('<=lg') {
+			width: 260px;
+		}
+		
+		@include media('<=md') {
+			order: -1;
+			margin-left: auto;
+			margin-top: -62px;
+		}
+		
+		@include media('<=xs') {
+			margin: 0;
+		}
+	}
+}

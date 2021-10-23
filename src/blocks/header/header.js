@@ -3,6 +3,7 @@ import scrollLock from 'scroll-lock';
 (() => {
 	let $shell = $('.header__menu');
 	let $toggle = $('.header__menu-toggle');
+	let vh = window.innerHeight * 0.01; // решение проблемы 100vh для меню на мобильных устройствах
 	
 	$('.header__search').on('click', 'input[type="submit"]', function(e) {
 		let $self = $(this);
@@ -44,5 +45,12 @@ import scrollLock from 'scroll-lock';
 		e.preventDefault();
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});	
+	
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+	window.addEventListener('resize', () => {
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
 
 })();

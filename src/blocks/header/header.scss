@@ -43,17 +43,18 @@
 	}
 
 	&__menu {
+		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 		flex-grow: 1;
 				
 		@include media('<=lg') {
-			box-sizing: border-box;
 			display: flex;
 			flex-flow: column wrap;
 			align-items: flex-start;
 			position: fixed;
 			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
 			z-index: 11;
 			right: -400px; top: 0;
 			max-width: 400px;
@@ -123,6 +124,7 @@
 	}
 	
 	&__menu-aux {
+		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 
@@ -217,7 +219,7 @@
 				}
 				
 				@include media('<=xxxs') {
-					width: 260px;
+					width: 270px;
 				}
 			}
 		}
