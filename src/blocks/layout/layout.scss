@@ -7,15 +7,43 @@
 		flex-wrap: wrap;
 	}
 
+	&_news {
+		#{$self}__side {
+		
+			@include media('<=md') {
+				order: -1;
+				margin-left: auto;
+				margin-top: -62px;
+			}
+			
+			@include media('<=xs') {
+				margin: 0;
+			}
+		}
+	}
+
+	&_d-news {
+		#{$self}__side {
+		
+			@include media('<=md') {
+				order: -1;
+			}
+		}
+	}
+
 	&__content {
 		box-sizing: border-box;
 		padding-right: 60px;
+		width: calc(100% - 360px);
+		
 		
 		@include media('<=lg') {
 			padding-right: 30px;
+			width: calc(100% - 260px);
 		}
 		
 		@include media('<=md') {
+			width: 100%;
 			padding-right: 0;
 		}
 	}
@@ -27,16 +55,6 @@
 		
 		@include media('<=lg') {
 			width: 260px;
-		}
-		
-		@include media('<=md') {
-			order: -1;
-			margin-left: auto;
-			margin-top: -62px;
-		}
-		
-		@include media('<=xs') {
-			margin: 0;
 		}
 	}
 }

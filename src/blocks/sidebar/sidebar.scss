@@ -10,7 +10,8 @@
 	&__socials {
 		display: flex;
 		align-items: center;
-		font-size: 18px;
+		font-size: 17px;
+		line-height: 1.2;
 
 		span {
 			margin-right: auto;
@@ -22,6 +23,9 @@
 		width: 30px;
 		margin-left: 8px;
 		flex-shrink: 0;
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.3s;
 
 		&_vk {
 			background: url('#{$images-path}icons-sprite.svg#icon-soc-vk-fill-view-white') center / 22px 12px no-repeat #000;
@@ -34,6 +38,18 @@
 		&_inst {
 			background: url('#{$images-path}icons-sprite.svg#icon-soc-instagram-view-white') center / 18px 18px no-repeat #000;
 		}
+		
+		&_share {
+			background: url('#{$images-path}icons-sprite.svg#icon-share-view-black') center left / 18px 20px no-repeat transparent;
+			padding-left: 30px;
+			width: auto;
+			height: 23px;
+			margin-left: auto;
+		}
+
+		&:hover {
+			color: #00BCD0;
+		}
 	}
 
 	&__body {
@@ -43,7 +59,9 @@
 	&__flyer {
 		box-sizing: border-box;
 		position: sticky;
+		z-index: 2;
 		top: 20px;
+		background-color: #fff;
 		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
 		padding: 35px 30px 10px;
 		overflow: hidden;
