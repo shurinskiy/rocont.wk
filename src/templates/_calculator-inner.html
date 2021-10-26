@@ -1,0 +1,66 @@
+<form action="./" class="h-calculation__inner">
+	<div class="h-calculation__dashboard">
+		<div class="h-calculation__ranges">
+			<span class="h-calculation__label">Ваш бюджет?</span>
+			<div class="h-calculation__range">
+				<div class="h-calculation__range-out"><span></span> ₽</div>
+				<input class="js-range" type="range" name="" value="1500000" min="50000" max="5000000">
+				<div class="h-calculation__scale">
+					<span>50 000</span>
+					<span>2 500 000</span>
+					<span>5 000 000</span>
+				</div>
+			</div>
+			<span class="h-calculation__label">Срок выполнения работ?</span>
+			<div class="h-calculation__range">
+				<div class="h-calculation__range-out"><span></span></div>
+				<input class="js-range" type="range" name="" value="4" min="1" max="12" data-numeral="месяц,месяца,месяцев">
+				<div class="h-calculation__scale h-calculation__scale_month">
+					<span>1</span>
+					<span>6</span>
+					<span>12</span>
+				</div>
+			</div>
+		</div>
+		<div class="h-calculation__controls">
+			<div class="h-calculation__control">
+				<span>Хотел бы рассчитать проект лично</span>
+				<input class="switch" name="self" type="checkbox">
+			</div>
+			<div class="h-calculation__control">
+				<span>Интересует больше чем один проект</span>
+				<input class="switch" name="many" type="checkbox">
+			</div>
+			<div class="h-calculation__control">
+				<span>Интересует больше чем один проект</span>
+				<input class="switch" type="checkbox">
+			</div>
+		</div>
+	</div>
+	<div class="h-calculation__side">
+		<span class="h-calculation__label h-calculation__label_side">Предварительная оценка Вашего проекта</span>
+		<div class="h-calculation__total">1 500 000 ₽</div>
+		<span class="h-calculation__label h-calculation__label_side2">Вам понадобится</span>
+		<ul class="h-calculation__list">
+			<li>- Создание прототипа</li>
+			<li>- Личная встреча с нашим менеджером</li>
+			<li>- Бесплатный анализ Вашего бизнеса</li>
+		</ul>
+		<div class="h-calculation__personals">
+			<div class="h-calculation__field">
+				<label for="">Ваше имя</label>
+				<input type="text">
+			</div>
+			<div class="h-calculation__field">
+				<label for="">Ваш email</label>
+				<input type="text">
+			</div>
+			<div class="h-calculation__field">
+				<label for="">Ваш телефон</label>
+				<input type="text">
+			</div>
+		</div>
+		<button class="h-calculation__button button button_arr" type="submit">Предварительный расчет</button>
+		<span class="h-calculation__note">*Предварительный расчет не является публичной офертой</span>
+	</div>
+</form>

@@ -1,0 +1,53 @@
+.p-solutions {
+	$self: &;
+	margin-bottom: 50px;
+
+	&__title {
+		&.title {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__side {
+
+	}
+
+	&__subtitle {
+		line-height: 1.3;
+		margin-bottom: 15px;
+		
+		span:nth-child(1) {
+			display: block;
+			font-size: 25px;
+			font-family: "MM", sans-serif;
+		}
+		
+		span:nth-child(2) {
+			display: block;
+			font-size: 20px;
+			color: #00BCD0;
+		}
+	}
+	
+	&__text {
+		font-size: 20px;
+		line-height: 1.3;
+		max-width: 600px;
+		margin-bottom: 30px;
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	&__image {
+
+	}
+}
