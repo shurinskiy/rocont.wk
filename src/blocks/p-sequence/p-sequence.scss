@@ -9,6 +9,10 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+
+		@include media('<=lg') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__items {
@@ -17,6 +21,11 @@
 		margin: 0 -10px;
 		width: 52%;
 		counter-reset: sequence_ctr;
+		
+		@include media('<=lg') {
+			margin-bottom: 50px;
+			width: 100%;
+		}
 	}
 	
 	&__item {
@@ -25,6 +34,10 @@
 		padding: 0 20px 0 40px;
 		width: calc(100% / 2 - 20px);
 		position: relative;
+		
+		@include media('<=xs') {
+			width: calc(100% / 1 - 20px);
+		}
 
 		&::before {
 			display: block;
@@ -54,11 +67,26 @@
 	}
 
 	&__side {
+		box-sizing: border-box;
 		background: url('./images/p-sequence-side-bg.png') center / cover no-repeat transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 0 30px;
+		min-height: 550px;
 		width: 48%;
+		
+		@include media('<=lg') {
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			min-height: 450px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 0 20px;
+		}
 	}
 
 	&__calc {
@@ -67,6 +95,10 @@
 		border-radius: 20px;
 		backdrop-filter: blur(14px);
 		background-color: rgba(75, 75, 75, 0.65);
+		
+		@include media('<=xxxs') {
+			padding: 50px 30px 60px;
+		}
 	}
 	
 	&__calc-top {

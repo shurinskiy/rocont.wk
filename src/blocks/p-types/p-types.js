@@ -6,25 +6,23 @@ import Swiper from 'swiper/core';
 		speed: 800,
 		spaceBetween: 30,
 		breakpoints: {
-			1100: { 
+			1280: { 
 				slidesPerView: 3.0,
 			},
+			1100: { 
+				slidesPerView: 2.5,
+			},
 			960: { 
-				slidesPerView: 2.6,
+				slidesPerView: 2.3,
 			},
 			780 : {
-				slidesPerView: 2.0,
+				slidesPerView: 1.8,
 			},
 			640: { 
 				slidesPerView: 1.5,
 			},
 			480: { 
 				slidesPerView: 1.3,
-				spaceBetween: 50
-			},
-			360: { 
-				slidesPerView: 1.2,
-				spaceBetween: 20
 			},
 			0: { 
 				slidesPerView: 1.0
