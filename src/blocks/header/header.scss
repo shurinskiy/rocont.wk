@@ -129,8 +129,12 @@
 		align-items: center;
 
 		@include media('<=lg') {
+			position: absolute;
+			left: 0;
+			bottom: 30px;
 			width: 100%;
-			margin: auto 0 10px 0 ;
+			padding: 0 15px;
+			// margin: auto 0 10px 0 ;
 			justify-content: space-between;
 		}
 	}
@@ -172,6 +176,8 @@
 		position: relative;
 		margin: 0 20px 0 auto;
 		flex-shrink: 0;
+		// position: absolute;
+		// right: 65px;
 		width: 50px;
 		height: 50px;
 
@@ -219,7 +225,7 @@
 				}
 				
 				@include media('<=xxxs') {
-					width: 270px;
+					width: 260px;
 				}
 			}
 		}
@@ -234,7 +240,8 @@
 		}
 
 		@include media('<=lg') {
-			margin: 0 10px 0 auto;
+			// right: 50px;
+			// bottom: 30px;
 			// display: none;
 			// order: -1;
 		}
@@ -246,6 +253,7 @@
 		font-size: 20px;
 		border-bottom: 1px solid #000;
 		transition: color 0.3s ease, border-color 0.3s ease;
+		// margin-left: 50px;
 
 		&:hover {
 			color: #00BCD0;

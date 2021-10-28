@@ -57,6 +57,7 @@ body, html {
 	line-height: calc(#{$basesize}px * 1.4);
 	font-family: "ML", sans-serif;
 	background-color: #fff;
+	position: relative;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;

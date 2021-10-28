@@ -9,3 +9,4 @@ import "../blocks/p-gallery/p-gallery.js";
 import "../blocks/p-composition/p-composition.js";
 import "../blocks/p-vacancies/p-vacancies.js";
 import "../blocks/p-types/p-types.js";
+import "../blocks/p-menu/p-menu.js";

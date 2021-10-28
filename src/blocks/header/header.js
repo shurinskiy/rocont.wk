@@ -8,7 +8,7 @@ import scrollLock from 'scroll-lock';
 	$('.header__search').on('click', 'input[type="submit"]', function(e) {
 		let $self = $(this);
 		let $text = $self.prev('input[type="text"]');
-		let width = parseInt($self.css('width'));
+		let width = parseInt($self.css('width') + 10);
 		let width_text = parseInt($text.css('width'));
 
 		$text.trigger('focus');
@@ -25,10 +25,13 @@ import scrollLock from 'scroll-lock';
 		$shell.toggleClass('opened');
 		
 		if($shell.hasClass('opened')) {
+			$shell.css({'max-width': parseInt($shell.css('max-width')) + scrollLock.getPageScrollBarWidth()});
 			scrollLock.disablePageScroll();
 			return;
 		}
-		
+
+		$shell.removeAttr('style');
+		scrollLock.clearQueueScrollLocks();
 		scrollLock.enablePageScroll();
 	});
 
@@ -36,7 +39,8 @@ import scrollLock from 'scroll-lock';
 		if($shell.hasClass('opened') && !e.target.closest('.header__menu')) {
 			e.preventDefault();
 			$toggle.toggleClass('opened');
-			$shell.toggleClass('opened');
+			$shell.toggleClass('opened').removeAttr('style');
+			scrollLock.clearQueueScrollLocks();
 			scrollLock.enablePageScroll();
 		}
 	});
