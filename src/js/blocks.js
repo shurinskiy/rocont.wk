@@ -10,3 +10,4 @@ import "../blocks/p-composition/p-composition.js";
 import "../blocks/p-vacancies/p-vacancies.js";
 import "../blocks/p-types/p-types.js";
 import "../blocks/p-menu/p-menu.js";
+import "../blocks/d-ctxt/d-ctxt.js";

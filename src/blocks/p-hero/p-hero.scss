@@ -9,6 +9,16 @@
 		background-size: 130%;
 	}
 
+	&_advs {
+		background-image: url('./images/d-hero-advs-bg.svg');
+		background-size: 50%;
+
+		@include media('<=sm') {
+			background-position: left top 67%;
+			background-size: 100%;
+		}
+	}
+
 	&__inner {
 		box-sizing: border-box;
 		display: flex;

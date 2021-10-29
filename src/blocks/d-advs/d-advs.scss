@@ -1,0 +1,71 @@
+.d-advs {
+	$self: &;
+
+	&__title {
+
+	}
+
+	&__block {
+		font-size: 18px;
+		line-height: 1.3;
+		margin-bottom: 50px;
+		display: flex;
+	}
+
+	&__side {
+		box-sizing: border-box;
+		padding-right: 3px;
+		width: 50%;
+	}
+
+	&__list {
+		counter-reset: advs_ctr;
+
+		li {
+			margin-bottom: 40px;
+			padding-left: 45px;
+			position: relative;
+			
+			&::before {
+				display: block;
+				counter-increment: advs_ctr;
+				content: counter(advs_ctr);
+				position: absolute;
+				left: 0; top: 0;
+				font-family: "MSB", sans-serif;
+				font-size: 34px;
+				line-height: 1.1;
+				color: #5f5f5f;
+				text-shadow: -4px 0px 0px #b1f8ff;
+			}
+
+			h4 {
+				font-family: "MSB", sans-serif;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__image {
+		box-sizing: border-box;
+		position: relative;
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		
+		&::before {
+			display: block;
+			content: url('./images/p-advs-google-bg.png');
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		&::after {
+			display: block;
+			content: url('./images/p-advs-google.png');
+		}
+	}
+}
