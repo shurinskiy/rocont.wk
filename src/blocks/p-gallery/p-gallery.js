@@ -5,6 +5,7 @@ import { Fancybox } from "@fancyapps/ui";
 	new Swiper('.p-gallery__slider', {
 		loop: true,
 		speed: 800,
+		threshold: 5,
 		spaceBetween: 4,
 		navigation: {
 			nextEl: '.p-gallery__arr_next',

@@ -10,6 +10,7 @@
 		line-height: 1.3;
 		margin-bottom: 50px;
 		display: flex;
+		align-items: center;
 	}
 
 	&__side {
@@ -57,15 +58,55 @@
 		
 		&::before {
 			display: block;
-			content: url('./images/p-advs-google-bg.png');
+			content: '';
 			position: absolute;
 			left: 50%; top: 50%;
 			transform: translate(-50%, -50%);
+			transition: opacity 0.5s;
+			opacity: 0;
 		}
 		
 		&::after {
 			display: block;
-			content: url('./images/p-advs-google.png');
+			content: '';
+		}
+		
+		&:hover::before {
+			opacity: 1;
+		}
+
+		&_google {
+			&::before {
+				content: url('./images/p-advs-google-bg.png');
+			}
+
+			&::after {
+				content: url('./images/p-advs-google.png');
+			}
+		}
+
+		&_yandx {
+			margin-top: -100px;
+
+			&::before {
+				content: url('./images/p-advs-yandx-bg.png');
+			}
+
+			&::after {
+				content: url('./images/p-advs-yandx.png');
+			}
+		}
+
+		&_yout {
+			margin-top: -150px;
+			
+			&::before {
+				content: url('./images/p-advs-yout-bg.svg');
+			}
+
+			&::after {
+				content: url('./images/p-advs-yout.png');
+			}
 		}
 	}
 }

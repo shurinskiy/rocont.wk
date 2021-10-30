@@ -1,20 +1,33 @@
 .d-plan {
 	$self: &;
+	background-color: #F8F8F8;
 
 	&__inner {
-
+		box-sizing: border-box;
+		display: flex;
+		min-height: 360px;
 	}
-
+	
 	&__offer {
-
+		padding: 50px 0;
+		align-self: center;
+		width: calc(100% - 640px);
+		
+		@include media('<=lg') {
+			width: calc(100% - 400px);
+		}
 	}
 
 	&__title {
-
+		font-size: 45px;
+		line-height: 1.3;
+		margin-bottom: 20px;
 	}
 
 	&__text {
-
+		font-size: 25px;
+		line-height: 1.3;
+		margin-bottom: 30px;
 	}
 
 	&__button {
@@ -22,7 +35,50 @@
 	}
 
 	&__side {
-
+		box-sizing: border-box;
+		position: relative;
+		overflow: hidden;
+		width: 640px;
+		flex-shrink: 0;
+		
+		@include media('<=lg') {
+			width: 400px;
+		}
 	}
 
+	&__img {
+		position: absolute;
+		bottom: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		
+		&_mountains {
+			right: 0;
+			width: 100%;
+			
+			@include media('<=lg') {
+				right: -320px;
+				width: calc(100% + 320px);
+			}
+		}
+		
+		&_tree {
+			right: 45%;
+			transform: translateX(45%);
+			
+			@include media('<=lg') {
+				right: 0;
+				transform: none;
+			}
+		}
+		
+		&_ground {
+			left: 10%;
+		}
+	}
 }

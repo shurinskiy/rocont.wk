@@ -1,40 +1,108 @@
 .d-ctxt {
 	$self: &;
+	margin-bottom: 80px;
 
 	&__title {
 
 	}
 
 	&__items {
+		box-sizing: border-box;
+		padding: 10px 10px 340px;
+		margin-bottom: -340px;
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		position: relative;
+		height: auto;
 
+		&.opened #{$self}__form {
+			position: absolute;
+		}
 	}
 
-	&__item {
-
+	&__form {
+		box-sizing: border-box;
+		background-color: #fff;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+		padding: 40px 25px 50px;
+		top: 0; left: 0;
+		z-index: 2;
+		width: 100%;
 	}
 
 	&__subtitle {
+		margin-bottom: 30px;
+		
+		span:nth-child(1) {
+			display: block;
+			font-size: 35px;
+			line-height: 1.4;
+		}
 
+		span:nth-child(2) {
+			display: block;
+			font-size: 25px;
+			line-height: 1.2;
+		}
 	}
 
 	&__list {
+		font-size: 15px;
+		line-height: 1.2;
+		margin-bottom: 30px;
 
+		li {
+			position: relative;
+			margin-bottom: 15px;
+			padding-left: 18px;
+
+			&::before {
+				display: block;
+				position: absolute;
+				top: 4px; left: 0;
+				content: '';
+				width: 10px;
+				height: 10px;
+				background-color: #d1f6fc;
+			}
+		}
 	}
 
 	&__hidden {
-
+		box-sizing: border-box;
+		display: none;
+		max-width: 320px;
+		padding: 40px 0;
 	}
-
+	
 	&__form-title {
-
+		font-size: 25px;
+		line-height: 1.3;
+		margin-bottom: 20px;
 	}
-
+	
 	&__field {
-
+		margin-bottom: 8px;
+		
+		label {
+			display: block;
+			font-size: 15px;
+			line-height: 1.1;
+			margin-bottom: 2px;
+		}
+		
+		input {
+			@extend %reset-input;
+			border: 1px solid #eee;
+			padding: 10px 5px;
+			width: 100%;
+		}
 	}
-
+	
 	&__button {
-
+		width: 100%;
+		max-width: 320px;
 	}
-
 }
