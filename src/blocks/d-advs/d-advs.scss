@@ -11,12 +11,25 @@
 		margin-bottom: 50px;
 		display: flex;
 		align-items: center;
+
+		@include media('<=md') {
+			align-items: flex-start;
+		}
 	}
 
 	&__side {
 		box-sizing: border-box;
-		padding-right: 3px;
+		padding-right: 30px;
 		width: 50%;
+		
+		@include media('<=md') {
+			width: 60%;
+		}
+		
+		@include media('<=sm') {
+			width: 100%;
+			padding: 0;
+		}
 	}
 
 	&__list {
@@ -56,6 +69,14 @@
 		justify-content: center;
 		overflow: hidden;
 		
+		@include media('<=md') {
+			width: 40%;
+		}
+		
+		@include media('<=sm') {
+			display: none;
+		}
+		
 		&::before {
 			display: block;
 			content: '';
@@ -75,37 +96,57 @@
 			opacity: 1;
 		}
 
-		&_google {
-			&::before {
-				content: url('./images/p-advs-google-bg.png');
+		&_yout {
+			margin-top: -170px;
+			
+			@include media('<=md') {
+				margin-top: -100px;
 			}
-
+			
+			&::before {
+				width: 100%;
+				height: 370px;
+				background: url('#{$images-path}p-advs-yout-bg.svg') center / contain no-repeat transparent;
+			}
+			
 			&::after {
-				content: url('./images/p-advs-google.png');
+				width: 100%;
+				height: 370px;
+				background: url('#{$images-path}p-advs-yout.png') center / contain no-repeat transparent;
 			}
 		}
 
 		&_yandx {
 			margin-top: -100px;
+			
+			@include media('<=md') {
+				margin-top: -70px;
+			}
 
 			&::before {
-				content: url('./images/p-advs-yandx-bg.png');
+				width: 100%;
+				height: 400px;
+				background: url('#{$images-path}p-advs-yandx-bg.png') center / contain no-repeat transparent;
 			}
 
 			&::after {
-				content: url('./images/p-advs-yandx.png');
+				width: 100%;
+				height: 400px;
+				background: url('#{$images-path}p-advs-yandx.png') center / contain no-repeat transparent;
 			}
 		}
 
-		&_yout {
-			margin-top: -150px;
-			
+		&_google {
 			&::before {
-				content: url('./images/p-advs-yout-bg.svg');
+				width: 100%;
+				height: 370px;
+				background: url('#{$images-path}p-advs-google-bg.png') center / contain no-repeat transparent;
 			}
 
 			&::after {
-				content: url('./images/p-advs-yout.png');
+				width: 100%;
+				height: 370px;
+				background: url('#{$images-path}p-advs-google.png') center / contain no-repeat transparent;
 			}
 		}
 	}
