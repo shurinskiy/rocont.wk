@@ -93,6 +93,10 @@
 		font-size: 40px;
 		line-height: 1.2;
 		margin-bottom: 35px;
+
+		input {
+			@extend %reset-input;
+		}
 	}
 
 	&__scale {
@@ -224,6 +228,7 @@
 			margin-bottom: 10px;
 		}
 		
+		input[type="tel"],
 		input[type="text"] {
 			@extend %reset-input;
 			padding: 20px 10px;

@@ -20,6 +20,7 @@
 					<a class="header__navi-link" href="./clients.html">Наши клиенты</a>
 					<a class="header__navi-link" href="./portfolio.html">Портфолио</a>
 					<a class="header__navi-link" href="./news.html">Новости</a>
+					<a class="header__navi-link header__navi-link_hidden" href="./services.html">Услуги</a>
 					<a class="header__navi-link" href="./vacancies.html">Вакансии</a>
 					<a class="header__navi-link" href="./contacts.html">Контакты</a>
 				</nav>
@@ -66,10 +67,19 @@
 					<img class="h-hero__img h-hero__img_town" src="./images/hero-town.svg" alt="">
 					<img class="h-hero__img h-hero__img_human" src="./images/hero-human.svg" alt="">
 				</div>
+				<div class="h-hero__item swiper-slide">
+					<div class="h-hero__side">
+						<h2 class="h-hero__title">ROCONT — Ваш ключ к интернет-маркетингу</h2>
+						<div class="h-hero__text">Rocont Advertising - международное рекламное агентство полного цикла, занимающееся онлайн и оффлайн продвижением. Наша специализация - комплексное продвижение в интернете, брендирование и оффлайн реклама.</div>
+						<a class="h-hero__button button" href="./"><span>Начать проект</span></a>
+					</div>
+					<img class="h-hero__img h-hero__img_town" src="./images/hero-town.svg" alt="">
+					<img class="h-hero__img h-hero__img_human" src="./images/hero-human.svg" alt="">
+				</div>
 			</div>
 			<div class="h-hero__navi">
 				<button class="h-hero__arr h-hero__arr_prev"></button>
-				<div class="h-hero__count">1 | <span></span></div>
+				<div class="h-hero__count"><span>1</span> | <span></span></div>
 				<button class="h-hero__arr h-hero__arr_next"></button>
 			</div>
 		</div>
@@ -124,7 +134,7 @@
 			<div class="h-blog__images">
 				<div class="h-blog__navi">
 					<button class="h-blog__arr h-blog__arr_prev"></button>
-					<div class="h-blog__count">1 | <span></span></div>
+					<div class="h-blog__count"><span>1</span> | <span></span></div>
 					<button class="h-blog__arr h-blog__arr_next"></button>
 				</div>
 				<img class="h-blog__img h-blog__img_cloud-right" src="./images/cloud-right.svg" alt="">
@@ -143,7 +153,7 @@
 		<div class="h-calculation__ranges">
 			<span class="h-calculation__label">Ваш бюджет?</span>
 			<div class="h-calculation__range">
-				<div class="h-calculation__range-out"><span></span> ₽</div>
+				<div class="h-calculation__range-out"><input type="text"> &#8381;</div>
 				<input class="js-range" type="range" name="" value="1500000" min="50000" max="5000000">
 				<div class="h-calculation__scale">
 					<span>50 000</span>
@@ -153,7 +163,7 @@
 			</div>
 			<span class="h-calculation__label">Срок выполнения работ?</span>
 			<div class="h-calculation__range">
-				<div class="h-calculation__range-out"><span></span></div>
+				<div class="h-calculation__range-out"><input type="text"> <span></span></div>
 				<input class="js-range" type="range" name="" value="4" min="1" max="12" data-numeral="месяц,месяца,месяцев">
 				<div class="h-calculation__scale h-calculation__scale_month">
 					<span>1</span>
@@ -197,7 +207,7 @@
 			</div>
 			<div class="h-calculation__field">
 				<label for="">Ваш телефон</label>
-				<input type="text">
+				<input type="tel">
 			</div>
 		</div>
 		<button class="h-calculation__button button button_arr" type="submit">Предварительный расчет</button>
@@ -239,7 +249,7 @@
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш телефон</label>
-						<input type="text" placeholder="Введите номер телефона">
+						<input type="tel" placeholder="Введите номер телефона">
 					</div>
 					<div class="h-order__field">
 						<button class="button" type="submit">Начать проект</button>

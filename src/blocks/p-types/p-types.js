@@ -1,10 +1,27 @@
-import Swiper from 'swiper/core';
+import Swiper, { Navigation } from 'swiper/core';
+Swiper.use([Navigation]);
 
 (() => {
+	let $all = $('.p-types__count').find('span:last-child');
+	let $current = $('.p-types__count').find('span:first-child');
+	let total = $('.p-types__items').find('.p-types__item').length;
+
 	new Swiper('.p-types__items', {
 		loop: true,
 		speed: 800,
 		spaceBetween: 30,
+		navigation: {
+			nextEl: '.p-types__arr_next',
+			prevEl: '.p-types__arr_prev',
+		},
+		on: {
+			beforeInit: function(swiper) {
+				$all.text(total);
+			},
+			slideChange: function(swiper) {
+				$current.text((swiper.activeIndex % total) || total);
+			}
+		},
 		breakpoints: {
 			1280: { 
 				slidesPerView: 3.0,

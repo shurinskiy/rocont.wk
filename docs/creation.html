@@ -20,6 +20,7 @@
 					<a class="header__navi-link" href="./clients.html">Наши клиенты</a>
 					<a class="header__navi-link" href="./portfolio.html">Портфолио</a>
 					<a class="header__navi-link" href="./news.html">Новости</a>
+					<a class="header__navi-link header__navi-link_hidden" href="./services.html">Услуги</a>
 					<a class="header__navi-link" href="./vacancies.html">Вакансии</a>
 					<a class="header__navi-link" href="./contacts.html">Контакты</a>
 				</nav>
@@ -37,8 +38,8 @@
 </header>
 <button class="p-menu__open" data-scroll-lock-fill-gap></button>
 <nav class="p-menu">
-	<div class="p-menu__container container">
-		<div class="p-menu__inner" data-scroll-lock-scrollable data-scroll-lock-fill-gap>
+	<div class="p-menu__container container" data-scroll-lock-scrollable data-scroll-lock-fill-gap>
+		<div class="p-menu__inner">
 			<button class="p-menu__close"></button>
 			<a class="p-menu__link" href="./">Создание сайтов</a>
 			<a class="p-menu__link" href="./">Реклама в интернете</a>
@@ -112,6 +113,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="p-types__navi">
+				<button class="p-types__arr p-types__arr_prev"></button>
+				<div class="p-types__count"><span>1</span> | <span></span></div>
+				<button class="p-types__arr p-types__arr_next"></button>
+			</div>
 		</div>
 	</div>
 </section>
@@ -141,7 +147,7 @@
 		<div class="h-calculation__ranges">
 			<span class="h-calculation__label">Ваш бюджет?</span>
 			<div class="h-calculation__range">
-				<div class="h-calculation__range-out"><span></span> ₽</div>
+				<div class="h-calculation__range-out"><input type="text"> &#8381;</div>
 				<input class="js-range" type="range" name="" value="1500000" min="50000" max="5000000">
 				<div class="h-calculation__scale">
 					<span>50 000</span>
@@ -151,7 +157,7 @@
 			</div>
 			<span class="h-calculation__label">Срок выполнения работ?</span>
 			<div class="h-calculation__range">
-				<div class="h-calculation__range-out"><span></span></div>
+				<div class="h-calculation__range-out"><input type="text"> <span></span></div>
 				<input class="js-range" type="range" name="" value="4" min="1" max="12" data-numeral="месяц,месяца,месяцев">
 				<div class="h-calculation__scale h-calculation__scale_month">
 					<span>1</span>
@@ -195,7 +201,7 @@
 			</div>
 			<div class="h-calculation__field">
 				<label for="">Ваш телефон</label>
-				<input type="text">
+				<input type="tel">
 			</div>
 		</div>
 		<button class="h-calculation__button button button_arr" type="submit">Предварительный расчет</button>
@@ -306,7 +312,7 @@
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш телефон</label>
-						<input type="text" placeholder="Введите номер телефона">
+						<input type="tel" placeholder="Введите номер телефона">
 					</div>
 					<div class="h-order__field">
 						<button class="button" type="submit">Начать проект</button>

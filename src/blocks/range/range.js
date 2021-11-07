@@ -1,25 +1,34 @@
 (() => {
 	
 	$('input.js-range').each(function(index) {
-		let $self = $(this);
-		let min = $(this).attr('min') || 0;
-		let max = $(this).attr('max') || 100;
-		let round = 10**(min.length-1);
-		let numeral = $self.data("numeral");
+		$(this)
+			.addClass('range__input')
+			.wrap('<label class="range">')
+			.parent('.range')
+			.prepend('<span class="range__scale"></span><span class="range__handler"></span>');
+		
+		const $range = $(this);
+		const min = $range.attr('min') || 0;
+		const max = $range.attr('max') || 100;
+		const round = 10**(min.length - 1);
+		const numeral = $range.data("numeral");
+		const $scale = $range.parent('.range').find('.range__scale');
+		const $handler = $range.parent('.range').find('.range__handler');
+		const $output = $range.parents('.h-calculation__range').find('.h-calculation__range-out input');
 
-		let getPercentage = (value) => {
+		const getPercentage = (value) => {
 			value = value || 0;
 			return Math.floor((value - min)*100/(max - min))+'%';
 		}
 
-		let getRound = (a) => Math.round(a / round) * round;
+		const getRound = (a) => Math.round(a / round) * round;
 
-		let declOfNum = (n, data) => { 
+		const declOfNum = (n, data) => { 
 			if (!data) { return '' };
 
-			let text_forms = data.split(",");
+			const text_forms = data.split(",");
 			n = Math.abs(n) % 100; 
-			let n1 = n % 10;
+			const n1 = n % 10;
 
 			if (n > 10 && n < 20) { return text_forms[2].trim(); }
 			if (n1 > 1 && n1 < 5) { return text_forms[1].trim(); }
@@ -27,30 +36,32 @@
 			return text_forms[2].trim();
 		}
 
-		$self
-			.addClass('range__input')
-			.wrap('<label class="range">')
-			.parent('.range')
-			.prepend('<span class="range__scale"></span><span class="range__handler"></span>');
+		const setSize = function() {
+			const $inp = $(this);
+			$inp.css('width', `${$inp.val().length}ch`);
+		}
 
-		let initial = getPercentage($self.val());
-		let $bar = $self.parent('.range');
-		let $scale = $bar.find('.range__scale');
-		let $handler = $bar.find('.range__handler');
-		let $output = $(this)
-						.parents('.h-calculation__range')
-						.find('.h-calculation__range-out span');
+		const setValue = function(e) {
+			const value = e?.target.value ?? $(this).val();
+			const percent = getPercentage(value);
 
-		$scale.css({width: initial});
-		$handler.css({left: initial});
-		$output.text(`${new Intl.NumberFormat('ru-RU').format($self.val())} ${declOfNum($self.val(), numeral)}`);
-		
-		$self.on('change input', function(e) {
-			let value = getPercentage(this.value);
+			$scale.css({width: percent});
+			$handler.css({left: percent});
+			// $output.val(`${getRound(value)}`).next('span').text(`${declOfNum($range.val(), numeral)}`);
+			$output.val(`${new Intl.NumberFormat('ru-RU').format(getRound(value))}`).next('span').text(`${declOfNum($range.val(), numeral)}`);
+			setSize.call($output);
+		}
 
-			$scale.css({width: value});
-			$handler.css({left: value});
-			$output.text(`${new Intl.NumberFormat('ru-RU').format(getRound(this.value))} ${declOfNum(this.value, numeral)}`);
-		});
+		const setRange = function(e) {
+			// $range.val(e?.target.value);
+			$range.val(e?.target.value.replace(/\s+/g, ''));
+			setValue.call($range);
+		}
+
+		$output.on('change input', setSize);
+		$output.on('change input', setRange);
+		$range.on('change input', setValue);
+		setSize.call($output);
+		setValue.call($range);
 	});
 })();

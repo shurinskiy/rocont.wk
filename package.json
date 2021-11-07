@@ -50,6 +50,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^4.0.6",
+		"inputmask": "^5.0.6",
 		"jquery": "^3.6.0",
 		"scroll-lock": "^2.1.5",
 		"swiper": "6.8.4"

@@ -93,6 +93,14 @@
 		white-space: nowrap;
 		position: relative;
 
+		&_hidden {
+			display: none;
+
+			@include media('<=lg') {
+				display: block;
+			}
+		}
+
 		&::after {
 			content: '';
 			box-sizing: border-box;

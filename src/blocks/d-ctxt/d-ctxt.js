@@ -1,6 +1,10 @@
-import Swiper from 'swiper/core';
+import Swiper, { Navigation } from 'swiper/core';
+Swiper.use([Navigation]);
 
 (() => {
+	let $count_all = $('.d-ctxt__count').find('span:last-child');
+	let $count_current = $('.d-ctxt__count').find('span:first-child');
+	let count_total = $('.d-ctxt__items').find('.d-ctxt__item').length;
 	let $cards = $('.d-ctxt__items');
 
 	new Swiper('.d-ctxt__items', {
@@ -8,6 +12,18 @@ import Swiper from 'swiper/core';
 		speed: 800,
 		spaceBetween: 30,
 		threshold: 5,
+		navigation: {
+			nextEl: '.d-ctxt__arr_next',
+			prevEl: '.d-ctxt__arr_prev',
+		},
+		on: {
+			beforeInit: function(swiper) {
+				$count_all.text(count_total);
+			},
+			slideChange: function(swiper) {
+				$count_current.text((swiper.activeIndex % count_total) || count_total);
+			}
+		},
 		breakpoints: {
 			1280: { 
 				slidesPerView: 3.0,

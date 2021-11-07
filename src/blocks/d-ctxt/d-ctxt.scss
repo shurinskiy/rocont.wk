@@ -1,6 +1,6 @@
 .d-ctxt {
 	$self: &;
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 
 	&__title {
 
@@ -109,4 +109,66 @@
 		width: 100%;
 		max-width: 320px;
 	}
+
+	&__navi {
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		line-height: 1.1;
+		position: absolute;
+		bottom: 270px;
+		right: 0;
+		
+		@include media('<=sm') {
+			right: 50%;
+			transform: translateX(50%);
+		}
+	}
+
+	&__count {
+		margin: 0 20px;
+		white-space: nowrap;
+
+		span {
+			text-align: center;
+			display: inline-block;
+			min-width: 15px;			
+		}
+	}
+
+	&__arr {
+		@extend %reset-button;
+		width: 30px;
+		height: 30px;
+
+		@include media('<=sm') {
+			width: 60px;
+		}		
+		
+		&_prev {
+			left: 140px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-black') center left / 100px 17px no-repeat transparent;
+
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-left-view-green')	
+			}
+
+			@include media('<=xxxlg') {
+				left: 30px;
+			}
+		}
+		
+		&_next {
+			right: 140px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-black') center right / 100px 17px no-repeat transparent;
+
+			&:hover {
+				background-image: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-green')	
+			}
+
+			@include media('<=xxxlg') {
+				right: 30px;
+			}
+		}
+	}		
 }

@@ -2,6 +2,10 @@ import Swiper, { Navigation, Autoplay } from 'swiper/core';
 Swiper.use([Navigation, Autoplay]);
 
 (() => {
+	let $all = $('.h-hero__count').find('span:last-child');
+	let $current = $('.h-hero__count').find('span:first-child');
+	let total = $('.h-hero__slider').find('.h-hero__item').length;
+
 	new Swiper('.h-hero__slider', {
 		loop: true,
 		speed: 800,
@@ -11,8 +15,11 @@ Swiper.use([Navigation, Autoplay]);
 		},
 		on: {
 			beforeInit: function(swiper) {
-				$('.h-hero__count').find('span').text(swiper.$el.find('.swiper-slide').length);
+				$all.text(total);
 			},
+			slideChange: function(swiper) {
+				$current.text((swiper.activeIndex % total) || total);
+			}
 		},
 		autoplay: {
 			delay: 20000,

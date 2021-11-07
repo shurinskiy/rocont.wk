@@ -52,14 +52,19 @@
 			margin-bottom: 10px;
 		}
 
+		input[type="tel"],
 		input[type="text"] {
 			@extend %reset-input;
-			color: #AFAFAF;
+			color: #000;
 			padding: 20px 10px;
 			background-color: #fff;
 			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
 			width: 100%;
 			font-size: 14px;
+
+			&::placeholder {
+				color: #AFAFAF;
+			}
 		}
 
 		button[type="submit"] {
