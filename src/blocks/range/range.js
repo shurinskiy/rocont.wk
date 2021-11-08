@@ -15,6 +15,7 @@
 		const $scale = $range.parent('.range').find('.range__scale');
 		const $handler = $range.parent('.range').find('.range__handler');
 		const $output = $range.parents('.h-calculation__range').find('.h-calculation__range-out input');
+		let timer;
 
 		const getPercentage = (value) => {
 			value = value || 0;
@@ -36,11 +37,13 @@
 			return text_forms[2].trim();
 		}
 
+		// установить ширину поля ввода-вывода в зависимости от ширины контента
 		const setSize = function() {
 			const $inp = $(this);
 			$inp.css('width', `${$inp.val().length}ch`);
 		}
 
+		// установить значение поля ввода-вывода
 		const setValue = function(e) {
 			const value = e?.target.value ?? $(this).val();
 			const percent = getPercentage(value);
@@ -52,9 +55,20 @@
 			setSize.call($output);
 		}
 
+		// установить положение ползунка в случае ввода из поля ввода-вывода
 		const setRange = function(e) {
 			// $range.val(e?.target.value);
 			$range.val(e?.target.value.replace(/\s+/g, ''));
+
+			if(e.type == 'input') {
+				clearTimeout(timer);
+				timer = setTimeout(() => {
+					setValue.call($range);
+				}, 2000);
+				
+				return;
+			}
+
 			setValue.call($range);
 		}
 
@@ -64,4 +78,5 @@
 		setSize.call($output);
 		setValue.call($range);
 	});
+
 })();

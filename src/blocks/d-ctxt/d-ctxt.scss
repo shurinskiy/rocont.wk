@@ -8,8 +8,8 @@
 
 	&__items {
 		box-sizing: border-box;
-		padding: 10px 10px 340px;
-		margin-bottom: -340px;
+		padding: 10px 10px 380px;
+		margin-bottom: -380px;
 	}
 	
 	&__item {
@@ -104,6 +104,19 @@
 		}
 	}
 	
+	&__field-error {
+		display: block;
+		box-sizing: border-box;
+		color: red;
+		padding-top: 5px;
+		font-size: 13px;
+		line-height: 1.2;
+
+		span {
+			display: block;
+		}
+	}
+	
 	&__button {
 		margin-top: auto;
 		width: 100%;
@@ -116,7 +129,7 @@
 		font-size: 20px;
 		line-height: 1.1;
 		position: absolute;
-		bottom: 270px;
+		bottom: 310px;
 		right: 0;
 		
 		@include media('<=sm') {

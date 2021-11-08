@@ -71,10 +71,33 @@
 			position: relative;
 			margin-top: 33px;
 			width: 100%;
+
+			&:disabled {
+				background-color: #efefef;
+				cursor: auto;
+
+				&:hover::before {
+					display: none;
+				}
+			}
 			
 			@include media('<=xs') {
 				margin-top: 10px;
 			}
+		}
+	}
+
+	&__field-error {
+		display: block;
+		box-sizing: border-box;
+		padding-top: 10px;
+		color: red;
+		font-size: 13px;
+		line-height: 1.1;
+		margin-bottom: -24px;
+
+		span {
+			display: block;
 		}
 	}
 
@@ -88,7 +111,7 @@
 	
 	&__agree-check {
 		@extend %reset-input;
-		margin: 0px 10px 0 0;
+		margin: 2px 5px 0 0;
 		display: block;
 		width: 17px;
 		height: 17px;

@@ -44,11 +44,6 @@ import scrollLock from 'scroll-lock';
 			scrollLock.enablePageScroll();
 		}
 	});
-
-	$(".footer__up-btn").on('click', function(e) {
-		e.preventDefault();
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-	});	
 	
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 

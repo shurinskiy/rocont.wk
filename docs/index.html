@@ -147,13 +147,13 @@
 
 <section class="h-calculation">
 	<div class="container">
-		<h2 class="h-calculation__title title">Предварительный расчет</h2>
+		<h2 class="h-calculation__title title">Предвари&shy;тельный расчет</h2>
 		<form action="./" class="h-calculation__inner">
 	<div class="h-calculation__dashboard">
 		<div class="h-calculation__ranges">
 			<span class="h-calculation__label">Ваш бюджет?</span>
 			<div class="h-calculation__range">
-				<div class="h-calculation__range-out"><input type="text"> &#8381;</div>
+				<div class="h-calculation__range-out"><input type="text">&#8381;</div>
 				<input class="js-range" type="range" name="" value="1500000" min="50000" max="5000000">
 				<div class="h-calculation__scale">
 					<span>50 000</span>
@@ -200,14 +200,17 @@
 			<div class="h-calculation__field">
 				<label for="">Ваше имя</label>
 				<input type="text">
+				<div class="h-calculation__field-error"><span>Поле обязательно для заполенения</span></div>
 			</div>
 			<div class="h-calculation__field">
 				<label for="">Ваш email</label>
 				<input type="text">
+				<div class="h-calculation__field-error"><span>Введите корректный адрес почты</span></div>
 			</div>
 			<div class="h-calculation__field">
 				<label for="">Ваш телефон</label>
 				<input type="tel">
+				<div class="h-calculation__field-error"><span>Поле обязательно для заполенения</span></div>
 			</div>
 		</div>
 		<button class="h-calculation__button button button_arr" type="submit">Предварительный расчет</button>
@@ -242,21 +245,24 @@
 					<div class="h-order__field">
 						<label for="">Ваше имя</label>
 						<input type="text" placeholder="Введите имя">
+						<div class="h-order__field-error"><span>Поле обязательно для заполнения</span></div>
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш email</label>
 						<input type="text" placeholder="Введите почту">
+						<div class="h-order__field-error"><span>Введите корректный адрес почты</span></div>
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш телефон</label>
 						<input type="tel" placeholder="Введите номер телефона">
+						<div class="h-order__field-error"><span>Поле обязательно для заполенения</span></div>
 					</div>
 					<div class="h-order__field">
 						<button class="button" type="submit">Начать проект</button>
 					</div>
 				</div>
 				<div class="h-order__agree">
-					<input class="h-order__agree-check" type="checkbox">
+					<input class="h-order__agree-check" type="checkbox" checked>
 					<p class="h-order__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
 				</div>
 				<div class="h-order__politic">Ваши личные данные будут использоваться для оперативной связи с Вами. Rocont обеспечивает защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="./">«Политика безопасности»</a></div>
@@ -269,7 +275,7 @@
 		</div>
 	</div>
 </section>
-<footer class="footer"> 
+<footer class="footer footer-js"> 
 	<div class="container">
 		<div class="footer__top">
 			<a class="footer__logo" href="./"><img src="./images/logo-bottom.svg" alt=""></a>

@@ -12,3 +12,7 @@ import "../blocks/p-vacancies/p-vacancies.js";
 import "../blocks/p-types/p-types.js";
 import "../blocks/p-menu/p-menu.js";
 import "../blocks/d-ctxt/d-ctxt.js";
+import "../blocks/h-order/h-order.js";
+import "../blocks/p-map/p-map.js";
+import "../blocks/footer/footer.js";
+import "../blocks/p-hero/p-hero.js";

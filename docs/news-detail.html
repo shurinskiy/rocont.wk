@@ -51,32 +51,34 @@
 		<section class="d-news">
 			<div class="d-news__date">19.08.2021</div>
 			<p>Создаем и продвигаем функциональные и информационные сайты.<br> Результаты работы оцениваем в показателях эффективности для бизнеса.</p>
-			<table class="d-news__table">
-				<thead>
-					<tr>
-						<th>Суммарный оборот клиентов в TikTok, <br> рублей в месяц без НДС</th>
-						<th>Вознаграж&shy;дение от оборота</th>
-					</tr>					
-				</thead>
-				<tbody>
-					<tr>
-						<td>от 30 000 до 99 999</td>
-						<td>6%</td>
-					</tr>
-					<tr>
-						<td>от 100 000 до 199 999</td>
-						<td>4%</td>
-					</tr>
-					<tr>
-						<td>от 200 000 до 499 999</td>
-						<td>5%</td>
-					</tr>
-					<tr>
-						<td>от 500 000</td>
-						<td>6%</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="d-news__table">
+				<table>
+					<thead>
+						<tr>
+							<th>Суммарный оборот клиентов в TikTok, <br> рублей в месяц без НДС</th>
+							<th>Вознаграж&shy;дение от оборота</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>от 30 000 до 99 999</td>
+							<td>6%</td>
+						</tr>
+						<tr>
+							<td>от 100 000 до 199 999</td>
+							<td>4%</td>
+						</tr>
+						<tr>
+							<td>от 200 000 до 499 999</td>
+							<td>5%</td>
+						</tr>
+						<tr>
+							<td>от 500 000</td>
+							<td>6%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 			<p>Присоединиться к партнерской программе могут фрилансеры и агентства, которые ведут рекламу трех и более клиентов и имеют суммарный оборот через eLama выше 30 000 рублей (без НДС).</p>
 			<p class="d-news__note">Сервис eLama предоставляет единый комплект закрывающих документов по всем поддерживаемым рекламным системам. На данный момент их 15. Отметим, что TikTok не предоставляет такие документы на русском языке.</p>
 			<h4 class="d-news__subtitle">Что можно сказать об аудитории TikTok и возможностях рекламы в соцсети:</h4>
@@ -171,21 +173,24 @@
 					<div class="h-order__field">
 						<label for="">Ваше имя</label>
 						<input type="text" placeholder="Введите имя">
+						<div class="h-order__field-error"><span>Поле обязательно для заполнения</span></div>
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш email</label>
 						<input type="text" placeholder="Введите почту">
+						<div class="h-order__field-error"><span>Введите корректный адрес почты</span></div>
 					</div>
 					<div class="h-order__field">
 						<label for="">Ваш телефон</label>
 						<input type="tel" placeholder="Введите номер телефона">
+						<div class="h-order__field-error"><span>Поле обязательно для заполенения</span></div>
 					</div>
 					<div class="h-order__field">
 						<button class="button" type="submit">Начать проект</button>
 					</div>
 				</div>
 				<div class="h-order__agree">
-					<input class="h-order__agree-check" type="checkbox">
+					<input class="h-order__agree-check" type="checkbox" checked>
 					<p class="h-order__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
 				</div>
 				<div class="h-order__politic">Ваши личные данные будут использоваться для оперативной связи с Вами. Rocont обеспечивает защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="./">«Политика безопасности»</a></div>
@@ -198,7 +203,7 @@
 		</div>
 	</div>
 </section>
-<footer class="footer"> 
+<footer class="footer footer-js"> 
 	<div class="container">
 		<div class="footer__top">
 			<a class="footer__logo" href="./"><img src="./images/logo-bottom.svg" alt=""></a>
