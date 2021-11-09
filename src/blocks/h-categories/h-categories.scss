@@ -1,6 +1,10 @@
 .h-categories {
 	$self: &;
 
+	@include media('<=lg') {
+		margin-top: -40px;
+	}
+
 	&__inner {
 		// display: grid;
 		// grid-template: auto / repeat(auto-fit, minmax(150px, auto));

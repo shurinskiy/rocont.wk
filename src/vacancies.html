@@ -85,19 +85,23 @@
 		<div class="p-contacts__inner">
 			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afdbac77a7e214b234034d845031db0cbd36179ba3582d8056cef6406d5a45a64&amp;width=100%25&amp;height=440&amp;lang=ru_RU&amp;scroll=false&amp;id=yamap"></script>
 			<div class="p-contacts__map" id="yamap">
-				<div class="p-contacts__flyer">
+				<form action="./" class="p-contacts__flyer">
+					<div class="p-contacts__hidden">
+						<input class="p-contacts__input" type="text" placeholder="Ваше имя">
+						<input class="p-contacts__input" type="tel" placeholder="Ваш телефон">
+					</div>
 					<div class="p-contacts__come">
 						<span>Добраться легко!</span>
 						<span>Вызвать такси до нашего офиса</span>
 					</div>
 					<button class="p-contacts__go button button_arr">Стартуем</button>
-				</div>
+				</form>
 			</div>
 			<div class="p-contacts__side">
 				<a class="p-contacts__entry p-contacts__entry_adrs" href="https://yandex.kz/maps/-/CCUqfJDhkC">Санкт-Петербург, Пискаревский проспект, д. 63, офис 444, ДЦ Кварц</a>
 				<a class="p-contacts__entry p-contacts__entry_phon" href="tel:+78126296097">+7 (812) 629-6097</a>
 				<a class="p-contacts__entry p-contacts__entry_mail" href="mailto:info@rocont.ru">info@rocont.ru</a>
-				<a class="p-contacts__callback button button_arr" href="./">Заказать звонок</a>
+				<a class="p-contacts__callback button button_arr" href="./" data-modal="get-callback">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
