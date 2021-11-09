@@ -69,7 +69,7 @@
 			<div class="p-hero__side">
 				<h1 class="p-hero__title">Реклама в интернете</h1>
 				<p class="p-hero__text">Создаем и продвигаем функциональные и информационные сайты. Результаты работы оцениваем в показателях эффективности для бизнеса.</p>
-				<button class="p-hero__button button button_arr">Предварительный расчет</button>
+				<button class="p-hero__button button button_arr" data-modal="promotion-plan">Предварительный расчет</button>
 				<button class="p-hero__down" data-anchor="d-advs"></button>
 			</div>
 			<div class="p-hero__image"><img src="./images/d-hero-advs-image.png" alt=""></div>
@@ -294,7 +294,7 @@
 			<div class="d-plan__offer">
 				<h5 class="d-plan__title">Затрудняетесь с выбором площадки?</h5>
 				<p class="d-plan__text">Оставьте заявку и мы бесплатно подготовим для вас план продвижения для вашего бизнеса.</p>
-				<button class="d-plan__button button">Получить план продвижения</button>
+				<button class="d-plan__button button" data-modal="contact-form">Получить план продвижения</button>
 			</div>
 			<div class="d-plan__side">
 				<div class="d-plan__img d-plan__img_mountains"><img src="./images/d-plan-mountains.svg" alt=""></div>
@@ -305,7 +305,7 @@
 	</div>
 </section>
 
-<footer class="footer footer-js"> 
+<footer class="footer"> 
 	<div class="container">
 		<div class="footer__top">
 			<a class="footer__logo" href="./"><img src="./images/logo-bottom.svg" alt=""></a>
@@ -345,6 +345,61 @@
 		</div>
 	</div>
 </footer> 
+
+<div class="modal__hidden">
+	<div id="contact-form">
+		<form class="h-form h-form_modal" action="./">
+			<h2 class="h-form__title title">Оставьте заявку чтобы начать проект</h2>
+			<div class="h-form__fields">
+				<div class="h-form__field">
+					<label>Ваше имя</label>
+					<input type="text" placeholder="Введите имя">
+					<div class="h-form__field-error"><span>Поле обязательно для заполнения</span></div>
+				</div>
+				<div class="h-form__field">
+					<label>Ваш email</label>
+					<input type="text" placeholder="Введите почту">
+					<div class="h-form__field-error"><span>Введите корректный адрес почты</span></div>
+				</div>
+				<div class="h-form__field">
+					<label>Ваш телефон</label>
+					<input type="tel" placeholder="Введите номер телефона">
+					<div class="h-form__field-error"><span>Поле обязательно для заполенения</span></div>
+				</div>
+				<div class="h-form__field">
+					<button class="button" type="submit">Начать проект</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="get-callback">
+		<form class="m-callback" action="./">
+			<div class="m-callback__field">
+				<label>Ваше имя</label>
+				<input type="text" placeholder="Введите имя">
+				<div class="m-callback__field-error"><span>Поле обязательно для заполнения</span></div>
+			</div>
+			<div class="m-callback__field">
+				<label>Ваш телефон</label>
+				<input type="tel" placeholder="Введите номер телефона">
+				<div class="m-callback__field-error"><span>Поле обязательно для заполенения</span></div>
+			</div>
+			<div class="m-callback__field">
+				<button class="button" type="submit">Заказать звонок</button>
+			</div>
+		</form>
+	</div>
+	<div id="cost-estimate">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
+		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
+	</div>
+	<div id="promotion-plan">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
+		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
+	</div>
+</div>
+
+
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 

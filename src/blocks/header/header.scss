@@ -62,7 +62,7 @@
 			padding: 50px 20px 30px;
 			background-color: rgba(255, 255, 255, 0.7);
 			backdrop-filter: blur(14px);
-			border-left: 1px solid #eaeaea;
+			border-left: 1px solid rgba(0, 0, 0, 0.1);
 			transition: right 0.3s ease-in;
 			overflow: auto;
 			
@@ -92,6 +92,7 @@
 		line-height: 1.2;
 		white-space: nowrap;
 		position: relative;
+		transition: text-shadow 0.3s;
 
 		&_hidden {
 			display: none;
@@ -114,8 +115,7 @@
 		}
 		
 		&:hover {
-			// font-family: "MR", sans-serif;
-			// letter-spacing: -0.035em;
+			text-shadow: 0 0 1px black;
 		
 			&::after {
 				width: calc(100% - 20px);

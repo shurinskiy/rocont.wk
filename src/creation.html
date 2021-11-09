@@ -15,7 +15,7 @@
 			<div class="p-hero__side">
 				<h1 class="p-hero__title">Создание сайтов</h1>
 				<p class="p-hero__text">Создаем и продвигаем функциональные и информационные сайты. Результаты работы оцениваем в показателях эффективности для бизнеса.</p>
-				<button class="p-hero__button button button_arr">Предварительный расчет</button>
+				<button class="p-hero__button button button_arr" data-modal="cost-estimate">Предварительный расчет</button>
 				<button class="p-hero__down" data-anchor="p-types"></button>
 			</div>
 			<div class="p-hero__image"><img src="./images/d-hero-creation-image.png" alt=""></div>
@@ -29,41 +29,89 @@
 		<div class="p-types__items swiper-container">
 			<div class="swiper-wrapper">
 				<div class="p-types__item swiper-slide">
-					<div class="p-types__item-body">
+					<form action="./" class="p-types__form">
 						<h4 class="p-types__subtitle">Corporate</h4>
 						<span class="p-types__price">от 150 000 руб.</span>
 						<p class="p-types__text">Создаем корпоративные сайты для решения маркетинговых задач с современным дизайном в тональности бренда.</p>
 						<div class="p-types__hidden">
-							<button class="p-types__button button">Оставить заявку</button>
+							<h5 class="p-types__form-title">Ваши данные</h5>
+							<div class="p-types__field">
+								<label>Имя</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Телефон</label>
+								<input type="tel">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Компания</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
 						</div>
-					</div>
+						<button class="p-types__button button">Оставить заявку</button>
+					</form>
 				</div>
 				<div class="p-types__item swiper-slide">
-					<div class="p-types__item-body">
+					<form action="./" class="p-types__form">
 						<h4 class="p-types__subtitle">Shop</h4>
 						<span class="p-types__price">от 250 000 руб.</span>
 						<p class="p-types__text">Знаем, как спроектировать продающую посадочную страницу, которая поможет бизнесу расти и развиваться. Проверено на себе.</p>
 						<div class="p-types__hidden">
-							<button class="p-types__button button">Оставить заявку</button>
+							<h5 class="p-types__form-title">Ваши данные</h5>
+							<div class="p-types__field">
+								<label>Имя</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Телефон</label>
+								<input type="tel">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Компания</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
 						</div>
-					</div>
+						<button class="p-types__button button">Оставить заявку</button>
+					</form>
 				</div>
 				<div class="p-types__item swiper-slide">
-					<div class="p-types__item-body">
+					<form action="./" class="p-types__form">
 						<h4 class="p-types__subtitle">Service</h4>
 						<span class="p-types__price">от 300 000 руб.</span>
 						<p class="p-types__text">Создаем корпоративные сайты для решения маркетинговых задач с современным дизайном в тональности бренда.</p>
 						<div class="p-types__hidden">
-							<button class="p-types__button button">Оставить заявку</button>
+							<h5 class="p-types__form-title">Ваши данные</h5>
+							<div class="p-types__field">
+								<label>Имя</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Телефон</label>
+								<input type="tel">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Компания</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
 						</div>
-					</div>
+						<button class="p-types__button button">Оставить заявку</button>
+					</form>
 				</div>
 			</div>
-			<div class="p-types__navi">
-				<button class="p-types__arr p-types__arr_prev"></button>
-				<div class="p-types__count"><span>1</span> | <span></span></div>
-				<button class="p-types__arr p-types__arr_next"></button>
-			</div>
+		</div>
+		<div class="p-types__navi">
+			<button class="p-types__arr p-types__arr_prev"></button>
+			<div class="p-types__count"><span>1</span> | <span></span></div>
+			<button class="p-types__arr p-types__arr_next"></button>
 		</div>
 	</div>
 </section>

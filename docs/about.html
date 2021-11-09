@@ -150,33 +150,33 @@
 <section class="h-order">
 	<div class="container">
 		<div class="h-order__inner">
-			<form class="h-order__form" action="./">
-				<h2 class="h-order__title title">Оставьте заявку чтобы начать проект</h2>
-				<div class="h-order__fields">
-					<div class="h-order__field">
+			<form class="h-order__form h-form" action="./">
+				<h2 class="h-form__title title">Оставьте заявку чтобы начать проект</h2>
+				<div class="h-form__fields">
+					<div class="h-form__field">
 						<label for="">Ваше имя</label>
 						<input type="text" placeholder="Введите имя">
-						<div class="h-order__field-error"><span>Поле обязательно для заполнения</span></div>
+						<div class="h-form__field-error"><span>Поле обязательно для заполнения</span></div>
 					</div>
-					<div class="h-order__field">
+					<div class="h-form__field">
 						<label for="">Ваш email</label>
 						<input type="text" placeholder="Введите почту">
-						<div class="h-order__field-error"><span>Введите корректный адрес почты</span></div>
+						<div class="h-form__field-error"><span>Введите корректный адрес почты</span></div>
 					</div>
-					<div class="h-order__field">
+					<div class="h-form__field">
 						<label for="">Ваш телефон</label>
 						<input type="tel" placeholder="Введите номер телефона">
-						<div class="h-order__field-error"><span>Поле обязательно для заполенения</span></div>
+						<div class="h-form__field-error"><span>Поле обязательно для заполенения</span></div>
 					</div>
-					<div class="h-order__field">
+					<div class="h-form__field">
 						<button class="button" type="submit">Начать проект</button>
 					</div>
 				</div>
-				<div class="h-order__agree">
-					<input class="h-order__agree-check" type="checkbox" checked>
-					<p class="h-order__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
+				<div class="h-form__agree">
+					<input class="h-form__agree-check" type="checkbox" checked>
+					<p class="h-form__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
 				</div>
-				<div class="h-order__politic">Ваши личные данные будут использоваться для оперативной связи с Вами. Rocont обеспечивает защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="./">«Политика безопасности»</a></div>
+				<div class="h-form__politic">Ваши личные данные будут использоваться для оперативной связи с Вами. Rocont обеспечивает защиту Ваших данных. Более подробную информацию смотрите по ссылке <a href="./">«Политика безопасности»</a></div>
 			</form>
 			<div class="h-order__side">
 				<img class="h-order__img h-order__img_camp" src="./images/camp.svg" alt="">
@@ -186,7 +186,7 @@
 		</div>
 	</div>
 </section>
-<footer class="footer footer-js"> 
+<footer class="footer"> 
 	<div class="container">
 		<div class="footer__top">
 			<a class="footer__logo" href="./"><img src="./images/logo-bottom.svg" alt=""></a>
@@ -226,6 +226,61 @@
 		</div>
 	</div>
 </footer> 
+
+<div class="modal__hidden">
+	<div id="contact-form">
+		<form class="h-form h-form_modal" action="./">
+			<h2 class="h-form__title title">Оставьте заявку чтобы начать проект</h2>
+			<div class="h-form__fields">
+				<div class="h-form__field">
+					<label>Ваше имя</label>
+					<input type="text" placeholder="Введите имя">
+					<div class="h-form__field-error"><span>Поле обязательно для заполнения</span></div>
+				</div>
+				<div class="h-form__field">
+					<label>Ваш email</label>
+					<input type="text" placeholder="Введите почту">
+					<div class="h-form__field-error"><span>Введите корректный адрес почты</span></div>
+				</div>
+				<div class="h-form__field">
+					<label>Ваш телефон</label>
+					<input type="tel" placeholder="Введите номер телефона">
+					<div class="h-form__field-error"><span>Поле обязательно для заполенения</span></div>
+				</div>
+				<div class="h-form__field">
+					<button class="button" type="submit">Начать проект</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="get-callback">
+		<form class="m-callback" action="./">
+			<div class="m-callback__field">
+				<label>Ваше имя</label>
+				<input type="text" placeholder="Введите имя">
+				<div class="m-callback__field-error"><span>Поле обязательно для заполнения</span></div>
+			</div>
+			<div class="m-callback__field">
+				<label>Ваш телефон</label>
+				<input type="tel" placeholder="Введите номер телефона">
+				<div class="m-callback__field-error"><span>Поле обязательно для заполенения</span></div>
+			</div>
+			<div class="m-callback__field">
+				<button class="button" type="submit">Заказать звонок</button>
+			</div>
+		</form>
+	</div>
+	<div id="cost-estimate">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
+		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
+	</div>
+	<div id="promotion-plan">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
+		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
+	</div>
+</div>
+
+
 <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
 <script src="common.js"></script> 
 </body> 
