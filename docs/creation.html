@@ -69,7 +69,7 @@
 			<div class="p-hero__side">
 				<h1 class="p-hero__title">Создание сайтов</h1>
 				<p class="p-hero__text">Создаем и продвигаем функциональные и информационные сайты. Результаты работы оцениваем в показателях эффективности для бизнеса.</p>
-				<button class="p-hero__button button button_arr" data-modal="cost-estimate">Предварительный расчет</button>
+				<button class="p-hero__button button button_arr" data-modal="contact-form">Предварительный расчет</button>
 				<button class="p-hero__down" data-anchor="p-types"></button>
 			</div>
 			<div class="p-hero__image"><img src="./images/d-hero-creation-image.png" alt=""></div>
@@ -104,8 +104,12 @@
 								<input type="text">
 								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
 							</div>
+							<div class="p-types__agree">
+								<input class="p-types__agree-check" type="checkbox" checked>
+								<p class="p-types__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
+							</div>
 						</div>
-						<button class="p-types__button button">Оставить заявку</button>
+						<button class="p-types__button button" type="submit">Оставить заявку</button>
 					</form>
 				</div>
 				<div class="p-types__item swiper-slide">
@@ -130,8 +134,12 @@
 								<input type="text">
 								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
 							</div>
+							<div class="p-types__agree">
+								<input class="p-types__agree-check" type="checkbox" checked>
+								<p class="p-types__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
+							</div>
 						</div>
-						<button class="p-types__button button">Оставить заявку</button>
+						<button class="p-types__button button" type="submit">Оставить заявку</button>
 					</form>
 				</div>
 				<div class="p-types__item swiper-slide">
@@ -156,16 +164,50 @@
 								<input type="text">
 								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
 							</div>
+							<div class="p-types__agree">
+								<input class="p-types__agree-check" type="checkbox" checked>
+								<p class="p-types__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
+							</div>
 						</div>
-						<button class="p-types__button button">Оставить заявку</button>
+						<button class="p-types__button button" type="submit">Оставить заявку</button>
+					</form>
+				</div>
+				<div class="p-types__item swiper-slide">
+					<form action="./" class="p-types__form">
+						<h4 class="p-types__subtitle">Service 2</h4>
+						<span class="p-types__price">от 300 000 руб.</span>
+						<p class="p-types__text">Создаем корпоративные сайты для решения маркетинговых задач с современным дизайном в тональности бренда.</p>
+						<div class="p-types__hidden">
+							<h5 class="p-types__form-title">Ваши данные</h5>
+							<div class="p-types__field">
+								<label>Имя</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Телефон</label>
+								<input type="tel">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__field">
+								<label>Компания</label>
+								<input type="text">
+								<div class="p-types__field-error"><span>Поле обязательно для заполенения</span></div>
+							</div>
+							<div class="p-types__agree">
+								<input class="p-types__agree-check" type="checkbox" checked>
+								<p class="p-types__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
+							</div>
+						</div>
+						<button class="p-types__button button" type="submit">Оставить заявку</button>
 					</form>
 				</div>
 			</div>
-		</div>
-		<div class="p-types__navi">
-			<button class="p-types__arr p-types__arr_prev"></button>
-			<div class="p-types__count"><span>1</span> | <span></span></div>
-			<button class="p-types__arr p-types__arr_next"></button>
+			<div class="p-types__navi">
+				<button class="p-types__arr p-types__arr_prev"></button>
+				<div class="p-types__count"><span>1</span> | <span></span></div>
+				<button class="p-types__arr p-types__arr_next"></button>
+			</div>
 		</div>
 	</div>
 </section>
@@ -253,6 +295,10 @@
 				<label for="">Ваш телефон</label>
 				<input type="tel">
 				<div class="h-calculation__field-error"><span>Поле обязательно для заполенения</span></div>
+			</div>
+			<div class="h-calculation__agree">
+				<input class="h-calculation__agree-check" type="checkbox" checked>
+				<p class="h-calculation__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
 			</div>
 		</div>
 		<button class="h-calculation__button button button_arr" type="submit">Предварительный расчет</button>
@@ -451,6 +497,10 @@
 					<button class="button" type="submit">Начать проект</button>
 				</div>
 			</div>
+			<div class="h-form__agree">
+				<input class="h-form__agree-check" type="checkbox" checked>
+				<p class="h-form__agree-text">Согласен на обработку <a href="./">личных данных</a> и обратную коммуникацию Подтвердите обработку персональных данных</p>
+			</div>
 		</form>
 	</div>
 	<div id="get-callback">
@@ -465,18 +515,14 @@
 				<input type="tel" placeholder="Введите номер телефона">
 				<div class="m-callback__field-error"><span>Поле обязательно для заполенения</span></div>
 			</div>
+			<div class="m-callback__agree">
+				<input class="m-callback__agree-check" type="checkbox" checked>
+				<p class="m-callback__agree-text">Согласен c <a href="./">политикой конфиденциальности</a></p>
+			</div>
 			<div class="m-callback__field">
 				<button class="button" type="submit">Заказать звонок</button>
 			</div>
 		</form>
-	</div>
-	<div id="cost-estimate">
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
-		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
-	</div>
-	<div id="promotion-plan">
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia odit consequuntur, illo quod fuga doloribus officia ea pariatur, laboriosam adipisci reprehenderit dolores reiciendis voluptate rem, excepturi magni tempore atque? Incidunt culpa velit animi aspernatur, quaerat quos molestias inventore consectetur eum nostrum consequatur voluptatem similique eaque, quae natus, officiis officia.</p>
-		<p>Ullam doloribus nisi voluptatibus eligendi, praesentium consequuntur quis repellat impedit vitae explicabo esse id, quod similique. Aspernatur repellendus quia sequi, deleniti voluptatum modi odit sunt nostrum harum aliquam earum consequatur eaque placeat mollitia? Odio assumenda consectetur laborum sequi? Culpa autem laboriosam magnam cum iusto dolorem accusantium, inventore magni aliquid at.</p>
 	</div>
 </div>
 

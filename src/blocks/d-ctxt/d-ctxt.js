@@ -26,9 +26,11 @@ Swiper.use([Navigation]);
 		},
 		breakpoints: {
 			1280: { 
+				enabled: false,
 				slidesPerView: 3.0,
 			},
 			1100: { 
+				enabled: true,
 				slidesPerView: 2.5,
 			},
 			960: { 
@@ -44,6 +46,7 @@ Swiper.use([Navigation]);
 				slidesPerView: 1.3,
 			},
 			0: { 
+				enabled: true,
 				slidesPerView: 1.0
 			}
 		}
@@ -82,6 +85,11 @@ Swiper.use([Navigation]);
 		}
 
 		$hidden.slideDown().parents('.d-ctxt__item').addClass('opened');
+	});
+
+	$cards.on('change', '.d-ctxt__agree-check[type="checkbox"]', function(e) {
+		const $self = $(this);
+		$self.parents('form').find('button[type="submit"]').prop('disabled', !$self.is(':checked'));
 	});
 
 })();

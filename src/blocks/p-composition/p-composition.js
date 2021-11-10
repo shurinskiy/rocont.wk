@@ -32,6 +32,7 @@ import Swiper from 'swiper/core';
 				slidesPerView: 1.5,
 			},
 			0: { 
+				enabled: true,
 				spaceBetween: 20,
 				slidesPerView: 1.0,
 			}

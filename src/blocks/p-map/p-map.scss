@@ -5,8 +5,16 @@
 	&__yamap {
 		background: url('./images/p-ymap-bg.jpg') center / auto no-repeat transparent;
 		display: block;
-		min-height: 720px;
+		height: 720px;
 		overflow: hidden;
+		
+		@include media('<=xs') {
+			height: 400px;
+			
+			> ymaps {
+				height: 400px !important;
+			}
+		}
 
 		ymaps[class$="ground-pane"] {
 			filter: saturate(0.0);

@@ -18,3 +18,4 @@ import "../blocks/footer/footer.js";
 import "../blocks/p-hero/p-hero.js";
 import "../blocks/modal/modal.js";
 import "../blocks/p-contacts/p-contacts.js";
+import "../blocks/m-callback/m-callback.js";

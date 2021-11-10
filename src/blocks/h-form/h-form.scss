@@ -82,15 +82,6 @@
 			position: relative;
 			// margin-top: 33px;
 			width: 100%;
-
-			&:disabled {
-				background-color: #efefef;
-				cursor: auto;
-
-				&:hover::before {
-					display: none;
-				}
-			}
 			
 			@include media('<=xs') {
 				margin-top: 10px;

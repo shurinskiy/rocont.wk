@@ -2,14 +2,23 @@
 	$self: &;
 	margin-bottom: 100px;
 
+	@include media('<=xlg') {	
+		margin-bottom: 40px;
+	}
+
 	&__title {
 
 	}
 
 	&__items {
 		box-sizing: border-box;
-		padding: 10px 10px 390px;
-		margin-bottom: -390px;
+		padding: 10px 10px 440px;
+		margin-bottom: -440px;
+
+		@include media('<=xlg') {
+			padding-bottom: 380px;
+			margin-bottom: -380px;
+		}
 	}
 	
 	&__item {
@@ -19,6 +28,7 @@
 
 		&.opened #{$self}__form {
 			position: absolute;
+			z-index: 3;
 		}
 	}
 
@@ -76,7 +86,7 @@
 	&__hidden {
 		box-sizing: border-box;
 		display: none;
-		max-width: 320px;
+		max-width: 350px;
 		padding: 40px 0;
 	}
 	
@@ -116,6 +126,39 @@
 			display: block;
 		}
 	}
+
+	&__agree {
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		font-size: 13px;
+		line-height: 1.4;
+	}
+
+	&__agree-check {
+		@extend %reset-input;
+		margin: 0px 10px 0 0;
+		display: block;
+		width: 17px;
+		height: 17px;
+		flex-shrink: 0;
+		border-radius: 3px;
+		border: 1px solid black;
+		background-color: #fff;
+		cursor: pointer;
+
+		&:checked {
+			background: url('#{$images-path}icons-sprite.svg#icon-check-view-black') center / 10px 8px no-repeat #fff;
+		}
+	}
+
+	&__agree-text {
+		margin-bottom: 0;
+
+		a {
+			color: inherit;
+		}
+	}
 	
 	&__button {
 		margin-top: auto;
@@ -124,17 +167,19 @@
 	}
 
 	&__navi {
-		display: flex;
+		display: none;
 		align-items: center;
+		padding-top: 40px;
 		font-size: 20px;
 		line-height: 1.1;
-		position: absolute;
-		bottom: 310px;
-		right: 0;
-		
+		justify-content: flex-end;
+
+		@include media('<=xlg') {
+			display: flex;
+		}
+
 		@include media('<=sm') {
-			right: 50%;
-			transform: translateX(50%);
+			justify-content: center;
 		}
 	}
 
