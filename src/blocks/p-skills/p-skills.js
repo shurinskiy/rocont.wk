@@ -2,9 +2,9 @@ import Swiper, { Navigation } from 'swiper/core';
 Swiper.use([Navigation]);
 
 (() => {
-	let $all = $('.p-skills__count').find('span:last-child');
-	let $current = $('.p-skills__count').find('span:first-child');
-	let total = $('.p-skills__slider').find('.p-skills__item').length;
+	// let $all = $('.p-skills__count').find('span:last-child');
+	// let $current = $('.p-skills__count').find('span:first-child');
+	// let total = $('.p-skills__slider').find('.p-skills__item').length;
 
 	new Swiper('.p-skills__slider', {
 		loop: true,
@@ -14,14 +14,14 @@ Swiper.use([Navigation]);
 			nextEl: '.p-skills__arr_next',
 			prevEl: '.p-skills__arr_prev',
 		},
-		on: {
+		/* on: {
 			beforeInit: function(swiper) {
 				$all.text(total);
 			},
 			slideChange: function(swiper) {
 				$current.text((swiper.activeIndex % total) || total);
 			}
-		},
+		}, */
 		breakpoints: {
 			1280: { 
 				slidesOffsetBefore: 300,

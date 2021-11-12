@@ -1,0 +1,163 @@
+.p-services {
+	$self: &;
+
+	&__items {
+		display: flex;
+		counter-reset: services_ctr;
+		flex-flow: row wrap;
+		margin: 0 -25px;
+		
+		@include media('<=lg') {
+			margin: 0 -15px;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		text-decoration: none;
+		color: inherit;
+		overflow: hidden;
+		background-color: #FFF9F9;
+		display: flex;
+		position: relative;
+		margin: 0 25px 50px;
+		height: 440px;
+		width: calc(100% / 2 - 50px);
+		transition: background-color 0.3s;
+
+		&::before {
+			display: block;
+			counter-increment: services_ctr;
+			content: "0"counter(services_ctr);
+			position: absolute;
+			top: 60px; left: -130px;
+			font-family: "ML", sans-serif;
+			font-size: 110px;
+			line-height: 1.0;
+			color: #fff;
+			transition: left 0.2s;
+
+			@include media('<=lg') {
+				font-size: 90px;
+				top: 30px;
+			}
+
+			@include media('<=sm') {
+				font-size: 110px;
+				top: 60px;
+			}
+
+			@include media('<=xs') {
+				font-size: 90px;
+				top: 30px;
+			}
+		}
+
+		&:hover {
+			background-color: #00BCD0;
+
+			&::before {
+				left: 30px;
+			}
+
+			#{$self}__side {
+				color: #fff;
+			}
+		}
+
+		@include media('<=lg') {
+			flex-flow: column nowrap;			
+			margin: 0 15px 30px;
+			width: calc(100% / 2 - 30px);
+		}
+		
+		@include media('<=sm') {
+			flex-flow: row nowrap;
+			width: calc(100% / 1 - 30px);
+			height: 400px;
+		}
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;			
+			height: 460px;
+		}
+	}
+	
+	&__side {
+		box-sizing: border-box;
+		padding: 30px;
+		align-self: flex-end;
+		position: relative;
+		z-index: 1;
+		width: 40%;
+		font-size: 28px;
+		line-height: 1.3;
+		white-space: nowrap;
+
+		@include media('<=lg') {
+			margin: auto 0 0 0;
+			padding-bottom: 10px;
+			width: 100%;
+		}
+		
+		@include media('<=sm') {
+			width: 40%;
+			padding: 30px;
+		}
+
+		@include media('<=xs') {
+			margin: auto 0 0 0;
+			font-size: 24px;
+			white-space: normal;
+			padding-bottom: 10px;
+			width: 100%;
+		}
+	}
+
+	&__image {
+		// @include outline();
+		width: calc(60% + 100px);
+		margin-left: -100px;
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			margin-top: auto;
+
+			@include media('<=lg') {
+				height: 100%;
+				object-fit: contain;
+				object-position: bottom;
+			}
+
+			@include media('<=sm') {
+				height: auto;
+				object-fit: unset;
+			}
+
+			@include media('<=xs') {
+				height: 100%;
+				object-fit: contain;
+				object-position: bottom;
+			}
+		}
+
+		@include media('<=lg') {
+			margin: 0;
+			width: 100%;
+			height: 260px;
+		}
+		
+		@include media('<=sm') {
+			width: calc(60% + 100px);
+			margin-left: -100px;
+			height: auto;
+		}
+		
+		@include media('<=xs') {
+			margin: 0;
+			width: 100%;
+			height: 270px;
+		}
+	}
+}

@@ -2,9 +2,9 @@ import Swiper, { Navigation } from 'swiper/core';
 Swiper.use([Navigation]);
 
 (() => {
-	let $count_all = $('.p-types__count').find('span:last-child');
-	let $count_current = $('.p-types__count').find('span:first-child');
-	let count_total = $('.p-types__items').find('.p-types__item').length;
+	// let $count_all = $('.p-types__count').find('span:last-child');
+	// let $count_current = $('.p-types__count').find('span:first-child');
+	// let count_total = $('.p-types__items').find('.p-types__item').length;
 	let $cards = $('.p-types__items');
 
 	new Swiper('.p-types__items', {
@@ -16,14 +16,14 @@ Swiper.use([Navigation]);
 			nextEl: '.p-types__arr_next',
 			prevEl: '.p-types__arr_prev',
 		},
-		on: {
+		/* on: {
 			beforeInit: function(swiper) {
 				$count_all.text(count_total);
 			},
 			slideChange: function(swiper) {
 				$count_current.text((swiper.activeIndex % count_total) || count_total);
 			}
-		},
+		}, */
 		breakpoints: {
 			1280: { 
 				slidesPerView: 3.0,
