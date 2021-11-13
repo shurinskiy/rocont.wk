@@ -112,6 +112,19 @@
 		font-size: 14px;
 		line-height: 1.4;
 	}
+
+	&__agree-error {
+		display: block;
+		box-sizing: border-box;
+		color: red;
+		font-size: 13px;
+		line-height: 1.1;
+		margin: -18px 0 6px;
+
+		span {
+			display: block;
+		}
+	}
 	
 	&__agree-check {
 		@extend %reset-input;

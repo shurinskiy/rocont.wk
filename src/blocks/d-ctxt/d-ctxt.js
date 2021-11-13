@@ -87,9 +87,9 @@ Swiper.use([Navigation]);
 		$hidden.slideDown().parents('.d-ctxt__item').addClass('opened');
 	});
 
-	$cards.on('change', '.d-ctxt__agree-check[type="checkbox"]', function(e) {
+	/* $cards.on('change', '.d-ctxt__agree-check[type="checkbox"]', function(e) {
 		const $self = $(this);
 		$self.parents('form').find('button[type="submit"]').prop('disabled', !$self.is(':checked'));
-	});
+	}); */
 
 })();

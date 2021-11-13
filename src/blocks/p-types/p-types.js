@@ -85,10 +85,10 @@ Swiper.use([Navigation]);
 		$hidden.slideDown().parents('.p-types__item').addClass('opened');
 	});
 
-	$cards.on('change', '.p-types__agree-check[type="checkbox"]', function(e) {
+	/* $cards.on('change', '.p-types__agree-check[type="checkbox"]', function(e) {
 		const $self = $(this);
 		$self.parents('form').find('button[type="submit"]').prop('disabled', !$self.is(':checked'));
-	});
+	}); */
 
 
 	/* $('.p-types__items').on({
