@@ -76,7 +76,7 @@
 		margin: 0 auto;
 		display: flex;
 
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			display: none;
 		}
 		
@@ -101,7 +101,7 @@
 		&_bottom {
 			display: none;
 
-			@include media('<=lg') {
+			@include media('<=xlg') {
 				display: flex;
 			}
 
@@ -141,10 +141,11 @@
 	}
 
 	&__up-btn {
-		width: 50px;
+		width: 20px;
 		height: 100px;
 		background: url('#{$images-path}icons-sprite.svg#icon-arr-up-long-view-white') center / 22px 93px no-repeat transparent;
 		margin-left: auto;
+		flex-shrink: 0;
 		
 		@include media('<=md') {
 			background-position: center top;
@@ -173,7 +174,7 @@
 		display: flex;
 		align-items: center;
 
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			flex-wrap: wrap;
 		}
 
@@ -233,7 +234,7 @@
 		display: flex;
 		margin-left: auto;
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			width: 100%;		
 		}
 		
@@ -253,7 +254,7 @@
 			color: #00BCD0;
 		}
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			margin: 40px auto 0;
 		}
 		
@@ -267,7 +268,7 @@
 		font-size: 15px;
 		line-height: 1.2;
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			margin: 40px auto 0;
 		}
 		

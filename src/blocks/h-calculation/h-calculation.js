@@ -1,4 +1,5 @@
 (() => {
+	let $wrapper = $('.h-calculation__side');
 	let $hidden = $('.h-calculation__personals');
 	let $toggle = $('.h-calculation__button');
 
@@ -6,16 +7,17 @@
 		if ($hidden.is(":hidden")) {
 			e.preventDefault();
 			e.stopPropagation();
+
 			$toggle.prev($hidden).slideDown(400, function() {
-				$hidden.addClass('opened');	
+				$hidden.add($wrapper).addClass('opened');
 			});
 		}
 	});
 
-	$(window).on('click', function(e) {
+	$wrapper.on('click', function(e) {
 		if($hidden.hasClass('opened') && !e.target.closest('.h-calculation__personals') && !$(e.target).is($toggle)) {
 			e.preventDefault();
-			$hidden.slideUp().removeClass('opened');
+			$hidden.slideUp().add($wrapper).removeClass('opened');
 		}
 	});
 

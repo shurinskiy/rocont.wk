@@ -185,6 +185,17 @@
 			padding: 30px 20px;
 			bottom: -405px;
 		}
+
+		&.opened {
+		
+			@include media('<=lg') {
+				bottom: -820px;
+			}
+			
+			@include media('<=xxxs') {
+				bottom: -860px;
+			}
+		}
 	}
 
 	&__total {

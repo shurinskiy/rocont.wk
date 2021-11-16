@@ -33,7 +33,7 @@
 		position: relative;
 		z-index: 12;
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			display: block;
 			
 			&.opened {
@@ -48,7 +48,7 @@
 		align-items: center;
 		flex-grow: 1;
 				
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			display: flex;
 			flex-flow: column wrap;
 			align-items: flex-start;
@@ -78,7 +78,7 @@
 		// justify-content: space-between;
 		margin: 0 auto;
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			margin: 0;
 			display: block;
 		}
@@ -97,7 +97,7 @@
 		&_hidden {
 			display: none;
 
-			@include media('<=lg') {
+			@include media('<=xlg') {
 				display: block;
 			}
 		}
@@ -124,9 +124,6 @@
 		
 		@include media('<=xlg') {
 			font-size: 18px;
-		}
-
-		@include media('<=lg') {
 			display: block;
 		}
 	}
@@ -136,7 +133,7 @@
 		display: flex;
 		align-items: center;
 
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			position: absolute;
 			left: 0;
 			bottom: 30px;
@@ -167,13 +164,13 @@
 			color: #00BCD0;
 		}
 		
-		@include media('<=xlg') {
+		/* @include media('<=xlg') {
 			font-size: 18px;
 			background: none;
 			padding-left: 0px;
-		}
+		} */
 		
-		@include media('<=lg') {
+		@include media('<=xlg') {
 			margin: 0;
 			padding-left: 50px;
 			background: url('#{$images-path}icons-sprite.svg#icon-call-view-black') center left 15px / 23px 23px no-repeat transparent;
@@ -195,7 +192,7 @@
 				box-shadow: -4px 4px 10px #ddd;
 				width: 420px;
 				
-				@include media('<=lg') {
+				@include media('<=xlg') {
 					width: 320px;
 				}
 				
@@ -224,7 +221,7 @@
 				box-shadow: -4px 4px 10px #ddd;
 				width: 420px;
 				
-				@include media('<=lg') {
+				@include media('<=xlg') {
 					width: 320px;
 				}
 				
